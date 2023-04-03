@@ -1,0 +1,56 @@
+.header-middle
+    .container.header-middle__container
+        a(href="/").header-middle__logo.header-logo
+            img(src="img/logo.svg", alt="").header-logo__img
+
+        ul.header-middle__main-menu.main-menu
+            li.main-menu__item
+                a(href="#").main-menu__link.active
+                    svg.main-menu__item-icon
+                        use(xlink:href='img/sprite.svg#building')
+                    span.main-menu__item-text Квартиры
+                ul.main-menu__submenu
+                    li.main-menu__submenu-item.active
+                        a(href="#").main-menu__submenu-link Пластиковые окна
+                    li.main-menu__submenu-item
+                        a(href="#").main-menu__submenu-link Балконы
+                    li.main-menu__submenu-item
+                        a(href="#").main-menu__submenu-link Декорирование и аксессуары
+                    li.main-menu__submenu-item
+                        a(href="#").main-menu__submenu-link Двери
+                    li.main-menu__submenu-item
+                        a(href="#").main-menu__submenu-link Рольшторы
+            li.main-menu__item
+                a(href="#").main-menu__link
+                    svg.main-menu__item-icon
+                        use(xlink:href='img/sprite.svg#house')
+                    span.main-menu__item-text Котеджи
+            li.main-menu__item
+                a(href="#").main-menu__link
+                    svg.main-menu__item-icon
+                        use(xlink:href='img/sprite.svg#briefcase')
+                    span.main-menu__item-text Офисы
+
+        ul.header-middle__secondary-menu.secondary-menu
+            li.secondary-menu__item
+                a(href="#").secondary-menu__link Акции
+            li.secondary-menu__item
+                a(href="#").secondary-menu__link Цены
+            li.secondary-menu__item
+                a(href="#").secondary-menu__link Калькулятор
+
+        .header-middle__box
+            a(href="#").header-middle__btn-phone.header-btn-phone
+                svg.header-btn-phone__icon
+                    use(xlink:href='img/sprite.svg#telephone')
+                span.header-btn-phone__text Заказать звонок
+
+            .header-middle__phone
+                span.header-middle__phone-text Ежедневно с 9:00 до 21:00
+                a(href="tel:+7 495 154-21-16").header-middle__phone-number +7 495 154-21-16
+
+            .header-middle__btns
+                button.header-middle__btn.header-middle__btn--search
+                    svg.header-middle__btn--icon
+                        use(xlink:href='img/sprite.svg#search')
+                button.header-middle__btn.header-middle__btn--mobile-menu

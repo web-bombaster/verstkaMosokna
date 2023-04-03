@@ -1,0 +1,13 @@
+mixin linkToPage(link, title)
+	p
+		a(href=link+".html" target="_blank") #{title}
+
+doctype html
+html(lang="ru-RU")
+	include ../includes/head
+	body
+		.container
+			h1 Верстка сайта «Название сайта»:
+			.index
+				p.info Если страничка отображается криво, обновляем ее через CTRL + F5!
+				+linkToPage('home','home - Главная')

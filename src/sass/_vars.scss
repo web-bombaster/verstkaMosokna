@@ -1,0 +1,40 @@
+@use "sass:math";
+
+// Брейкпоинты
+
+$break_lg: 1200px;
+$break_md: 992px;
+$break_ssm: 800px;
+$break_sm: 768px;
+$break_xs: 480px;
+$break_xxs: 330px;
+
+
+:root {
+
+    // Цвета
+    --color-text: #3E3E40; // цвет текста
+    --color-main: #0265C2; // основной цвет
+    --color-accent: #FF4545; // акцентный цвет
+    --color-bg-01: #B4B4B4;
+
+    // Шрифты
+    --font-family: 'Bliss Pro', sans-serif;
+
+    // Скругления
+    --brs: .8rem;
+
+    // Размеры
+    --mainGap: 20px;
+    @media (max-width: $break_lg) {
+        --mainGap: 10px;
+    }
+
+    --indentBlocks: 4.8rem;
+    @media (max-width: $break_lg) {
+        --indentBlocks: 4rem;
+    }
+
+    --heroMinCol: calc(100% / 5 - 3 / 4 * var(--mainGap));
+    --heroMaxCol: calc((100% - var(--heroMinCol) - 3 / 4 * var(--mainGap)) / 3);
+}

@@ -1,0 +1,153 @@
+@use "sass:math";
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	.input-wrapper {
+		width: 100%;
+		position: relative;
+
+		&.agreement {
+			width: 100%;
+			text-align: center;
+			padding-bottom: 25px;
+
+			.just-validate-error-label {
+				width: 100%;
+
+			}
+		}
+	}
+
+	input {
+		margin-bottom: 15px;
+		padding: 21px 23px;
+		width: 100%;
+
+		font-family: 'Inter', sans-serif;
+
+		background-color: #F2F2F2;
+		border: none;
+	}
+
+	textarea {
+		margin-bottom: 15px;
+		padding: 21px 23px;
+		width: 100%;
+		min-height: 130px;
+		background-color: #F2F2F2;
+		border: none;
+		resize: vertical;
+	}
+
+	.agreement, input[type='checkbox'] {
+		position: relative;
+		top: 1px;
+		width: auto;
+		margin-bottom: auto;
+		margin-right: 8px;
+	}
+}
+
+.form__title {
+	margin-bottom: 23px;
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 32px;
+	font-weight: 600;
+
+	@media (max-width: $break_lg) {
+		font-size: 26px;
+	}
+
+	@media (max-width: $break_md) {
+		font-size: 22px;
+	}
+}
+
+.form__phone {
+}
+.form__email {
+}
+.form__message {
+}
+.form__btn {
+	// margin-top: 15px;
+	margin-top: 0;
+	padding: 21px 70px;
+
+	font-family: 'Inter', sans-serif;
+}
+
+.agreement__label {
+	position: relative;
+	font-size: 14px;
+}
+
+.just-validate-error-label {
+	position: absolute;
+	// right: 13px;
+	right: 13px;
+	left: auto;
+	bottom: 2px;
+	z-index: 1;
+
+	// padding-top: 0;
+	// padding-bottom: 15px;
+	display: inline-block;
+	padding: 2px 10px;
+	margin-top: -10px;
+
+	background-color: #fff;
+	border-radius: 4px;
+
+	font-size: 14px;
+}
+
+.form__columns {
+	display: flex;
+	gap: 15px;
+
+	@media (max-width: $break_xs) {
+		flex-wrap: wrap;
+	}
+
+	.input-wrapper {
+		flex-basis: calc(50% - 1/2*15px);
+
+		@media (max-width: $break_xs) {
+			flex-basis: 100%;
+
+			&:first-child input {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.registration__form {
+	.btn {
+		margin-top: 25px;
+	}
+}
+
+.form .just-validate-error-field {
+	border: 1px solid rgb(184, 17, 17) !important;
+	// background-color: red;
+}
+
+.feedback__form {
+	padding: 40px 40px 60px;
+
+	background-color: #F2F2F2;
+
+
+	@media (max-width: $break_md) {
+		padding: 20px;
+	}
+
+	input, textarea {
+		background-color: #fff;
+	}
+}

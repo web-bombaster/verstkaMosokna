@@ -1,0 +1,137 @@
+//- Карточка товара
+mixin productItem(title, src, price, oldprice, discount, nalichie, populyarno, rassrochka, izbranno, vkorzine, sravnenie)
+	a(href="#").products-list__item.product-item
+		//- a(href="#").product-item__link
+		.product-item__labels.labels
+			if populyarno == '1'
+				.labels__item.labels__popular Популярно
+			if rassrochka == '1'
+				.labels__item.labels__installment Рассрочка
+
+		.product-item__bookmark.bookmark
+			if izbranno == '1'
+				.component-catalog-actions-bookmark.isSent(title="Удалить из избранного")
+					svg
+						use(xlink:href='img/sprite.svg#shop-favourites-fill')
+			if izbranno == '0'
+				.component-catalog-actions-bookmark(title="Добавить в избранное")
+					svg
+						use(xlink:href='img/sprite.svg#shop-favourites')
+
+
+		.product-item__img
+			img(src="img/products/"+src, alt="", loading="lazy")
+
+		.product-item__title #{title}
+
+		.product-item__info
+			if nalichie == '0'
+				.product-item__availability Под заказ
+			if nalichie == '1'
+				.product-item__availability.product-item__availability--true В наличии
+					svg
+						use(xlink:href='img/sprite.svg#shop-in-stock')
+			.product-item__params.params
+				span.params__name Площадь:
+				span.params__value 20 м²
+			.product-item__params.params
+				span.params__name Инвертор:
+				span.params__value Да
+
+		.product-item__footer
+			.product-item__price
+				| #{price}
+				if oldprice != ''
+					span.old-price #{oldprice}
+				if discount != ''
+					span.discount #{discount}
+			.product-item__actions
+				.product-item__buy.buy
+					if vkorzine == '1'
+						.product-item__btn.component-catalog-actions-buy.isSent(title="Добавлено в корзину")
+							svg
+								use(xlink:href='img/sprite.svg#check')
+					if vkorzine == '0'
+						.product-item__btn.component-catalog-actions-buy(title="Добавить в корзину")
+							svg
+								use(xlink:href='img/sprite.svg#shop-cart')
+				if sravnenie == '1'
+					.product-item__compare.compare(title="Добавлено в сравнение")
+						.product-item__btn.component-catalog-actions-compare.isSent
+							svg
+								use(xlink:href='img/sprite.svg#shop-compare')
+				if sravnenie == '0'
+					.product-item__compare.compare(title="Добавить в сравнение")
+						.product-item__btn.component-catalog-actions-compare
+							svg
+								use(xlink:href='img/sprite.svg#shop-compare')
+
+
+//- Карточка товара слайдере товаров
+mixin productItem(title, src, price, oldprice, discount, nalichie, populyarno, rassrochka, izbranno, vkorzine, sravnenie)
+	a(href="#").products-list__item.product-item.swiper-slide
+		//- a(href="#").product-item__link
+		.product-item__labels.labels
+			if populyarno == '1'
+				.labels__item.labels__popular Популярно
+			if rassrochka == '1'
+				.labels__item.labels__installment Рассрочка
+
+		.product-item__bookmark.bookmark
+			if izbranno == '1'
+				.component-catalog-actions-bookmark.isSent(title="Удалить из избранного")
+					svg
+						use(xlink:href='img/sprite.svg#shop-favourites-fill')
+			if izbranno == '0'
+				.component-catalog-actions-bookmark(title="Добавить в избранное")
+					svg
+						use(xlink:href='img/sprite.svg#shop-favourites')
+
+
+		.product-item__img
+			img(src="img/products/"+src, alt="", loading="lazy")
+
+		.product-item__title #{title}
+
+		.product-item__info
+			if nalichie == '0'
+				.product-item__availability Под заказ
+			if nalichie == '1'
+				.product-item__availability.product-item__availability--true В наличии
+					svg
+						use(xlink:href='img/sprite.svg#shop-in-stock')
+			.product-item__params.params
+				span.params__name Площадь:
+				span.params__value 20 м²
+			.product-item__params.params
+				span.params__name Инвертор:
+				span.params__value Да
+
+		.product-item__footer
+			.product-item__price
+				| #{price}
+				if oldprice != ''
+					span.old-price #{oldprice}
+				if discount != ''
+					span.discount #{discount}
+			.product-item__actions
+				.product-item__buy.buy
+					if vkorzine == '1'
+						.product-item__btn.component-catalog-actions-buy.isSent(title="Добавлено в корзину")
+							svg
+								use(xlink:href='img/sprite.svg#check')
+					if vkorzine == '0'
+						.product-item__btn.component-catalog-actions-buy(title="Добавить в корзину")
+							svg
+								use(xlink:href='img/sprite.svg#shop-cart')
+				if sravnenie == '1'
+					.product-item__compare.compare(title="Добавлено в сравнение")
+						.product-item__btn.component-catalog-actions-compare.isSent
+							svg
+								use(xlink:href='img/sprite.svg#shop-compare')
+				if sravnenie == '0'
+					.product-item__compare.compare(title="Добавить в сравнение")
+						.product-item__btn.component-catalog-actions-compare
+							svg
+								use(xlink:href='img/sprite.svg#shop-compare')
+
