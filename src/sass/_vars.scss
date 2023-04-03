@@ -16,23 +16,34 @@ $break_xxs: 330px;
     --color-text: #3E3E40; // цвет текста
     --color-main: #0265C2; // основной цвет
     --color-accent: #FF4545; // акцентный цвет
-    --color-bg-01: #B4B4B4;
+    --color-bg-01: #F4F4F4;
 
     // Шрифты
-    --font-family: 'Bliss Pro', sans-serif;
+    --font-family: 'Bliss Pro', sans-serif; // 'Bliss Pro'
+    --font-family-accent: 'Bliss Pro', sans-serif; // 'Calibri'
 
     // Скругления
     --brs: .8rem;
-
-    // Размеры
-    --mainGap: 20px;
-    @media (max-width: $break_lg) {
-        --mainGap: 10px;
+    @media (max-width: $break_xs) {
+        --brs: .4rem;
     }
 
-    --indentBlocks: 4.8rem;
-    @media (max-width: $break_lg) {
-        --indentBlocks: 4rem;
+    // Скругления элементов основной сетки
+    --brs-grid: 1.6rem;
+
+    // Гап для основной сетки
+    --mainGap: 24px;
+    @media (max-width: $break_sm) {
+        --mainGap: 16px;
+    }
+
+    // Отступы между блоками
+    --indentBlocks: 8rem;
+    @media (max-width: $break_sm) {
+        --indentBlocks: 6rem;
+    }
+    @media (max-width: $break_xs) {
+        --indentBlocks: 3.2rem;
     }
 
     --heroMinCol: calc(100% / 5 - 3 / 4 * var(--mainGap));

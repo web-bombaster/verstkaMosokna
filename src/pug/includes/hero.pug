@@ -1,0 +1,18 @@
+.hero
+    .container.hero__container
+        .hero__box
+            .hero__quiz.hero-quiz
+                .hero-quiz__title.h1 Введите адрес вашего дома<br> и узнайте точную стоимость остекления
+                form.hero-quiz__form
+                    input(type="text" placeholder="Братиславская, 8").hero-quiz__input
+                    button(type="submit").btn.btn__dark.hero-quiz__btn Рассчитать
+
+            a(href="#").hero__action.hero-action
+                img(src="../../img/content/hero-action/hero-action.jpg", alt="").hero-action__img
+                .hero-action__info
+                    .hero-action__title.h4 Скидки до 30000 рублей в честь нашего юбилея!
+                    .hero-action__descr Закажите остекление до 30 октября и получите персональную скидку.
+                    button.btn.btn__light.btn__arrow.hero-action__btn(aria-label="Подробнее об акции")
+                        svg
+                            use(xlink:href='img/sprite.svg#arrow-right')
+

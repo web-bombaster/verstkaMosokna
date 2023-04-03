@@ -1,0 +1,33 @@
+.advantages {
+    margin-bottom: var(--indentBlocks);
+}
+.advantages__container {
+}
+.advantages__box {
+    padding: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--color-bg-01);
+    border-radius: var(--brs-grid);
+}
+.advantages__item {
+    padding: 16px;
+}
+.advantages__title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    color: var(--color-accent);
+}
+.advantages__title-icon {
+    margin-top: -4px;
+    width: 16px;
+    height: 16px;
+}
+.advantages__title-text {
+}
+.advantages__descr {
+}
