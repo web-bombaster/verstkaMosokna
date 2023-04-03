@@ -1,0 +1,25 @@
+.bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    min-width: 500px;
+}
+.bubbles__item {
+}
+.bubbles__link {
+    padding: 10px 20px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--brs);
+    background-color: #fff;
+
+    transition: transform .25s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}

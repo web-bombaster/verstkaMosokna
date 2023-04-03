@@ -6,10 +6,12 @@
 .advantages__box {
     padding: 24px;
 
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    background-color: var(--color-bg-01);
+    background-color: var(--color-gray-01);
     border-radius: var(--brs-grid);
 }
 .advantages__item {
