@@ -3,7 +3,7 @@
         a(href="/").header-middle__logo.header-logo
             img(src="img/logo.svg", alt="").header-logo__img
 
-        ul.header-middle__main-menu.main-menu
+        ul.header-middle__main-menu.main-menu(data-da="mobile-menu__main-menu,1,880")
             li.main-menu__item
                 a(href="#").main-menu__link.active
                     svg.main-menu__item-icon
@@ -31,7 +31,7 @@
                         use(xlink:href='img/sprite.svg#briefcase')
                     span.main-menu__item-text Офисы
 
-        ul.header-middle__secondary-menu.secondary-menu
+        ul.header-middle__secondary-menu.secondary-menu(data-da="mobile-menu__secondary-menu,1,1200")
             li.secondary-menu__item
                 a(href="#").secondary-menu__link Акции
             li.secondary-menu__item
@@ -53,4 +53,6 @@
                 button.header-middle__btn.header-middle__btn--search
                     svg.header-middle__btn--icon
                         use(xlink:href='img/sprite.svg#search')
-                button.header-middle__btn.header-middle__btn--mobile-menu
+                //- button.header-middle__btn.header-middle__btn--mobile-menu
+                button.header-middle__btn.mobile-menu-btn.burger__menu-btn.js-burger.jsMobileMenuBtnToggle
+                    span

@@ -6,6 +6,10 @@
 
     font-size: 14px;
     color: #fff;
+
+    @media (max-width: $break_sm) {
+        display: none;
+    }
 }
 
 .header-top__container {

@@ -1,12 +1,35 @@
 .bubbles {
     display: flex;
     flex-wrap: wrap;
+    align-self: flex-start;
     gap: 16px;
 
+    @media (max-width: $break_sm) {
+        gap: 8px;
+        // display: block;
+    }
+}
+
+.js-bubbles-list {
+    // height: 140px;
+    width: 100%;
     min-width: 500px;
+
+    // @media (max-width: $break_sm) {
+    //     min-width: inherit;
+    // }
+
 }
+
 .bubbles__item {
+    height: auto !important;
+    width: auto !important;
+
+    // @media (max-width: $break_sm) {
+    //     height: 40px !important;
+    // }
 }
+
 .bubbles__link {
     padding: 10px 20px;
 
@@ -19,7 +42,19 @@
 
     transition: transform .25s;
 
+    @media (max-width: $break_xs) {
+        font-size: 14px;
+    }
+
     &:hover {
         transform: translateY(-2px);
+    }
+}
+
+.js-bubbles-list {
+    @media (max-width: $break_sm) {
+        // overflow: initial !important;
+        // height: auto !important;
+        min-width: auto;
     }
 }

@@ -3,49 +3,61 @@
 
 function initSwiper() {
 
-	if (document.querySelector('.jsHeroSlider')) {
-		const prodSliderInner = new Swiper('.jsHeroSlider', {
-			spaceBetween: 20,
-			slidesPerView: 1,
+	if (document.querySelector('.js-services-list')) {
+		const servicesList = new Swiper('.js-services-list', {
+			spaceBetween: 16,
+			slidesPerView: 1.3,
+			lazy: true,
 			loop: true,
-			pagination: {
-				el: ".hero-slider__pagination",
+			breakpoints: {
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 16,
+					loop: true,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+					loop: true,
+				},
 			},
 			navigation: {
-				nextEl: ".hero-slider__next",
-				prevEl: ".hero-slider__prev",
+				nextEl: ".services-list__next",
+				prevEl: ".services-list__prev",
 			},
 		});
 	};
 
-	if (document.querySelector('.jsProductsListSlider')) {
-		const prodSliderInner = new Swiper('.jsProductsListSlider', {
-			spaceBetween: 10,
-			slidesPerView: 1,
-			loop: true,
-			breakpoints: {
-				500: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-					loop: true,
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-					loop: true,
-				},
-				1401: {
-					slidesPerView: 4,
-					spaceBetween: 20,
-					loop: true,
-				},
-			},
-			navigation: {
-				nextEl: ".products-list__next",
-				prevEl: ".products-list__prev",
-			},
-		});
-	};
+	// if (document.querySelector('.js-bubbles-list')) {
+	// 	if (document.documentElement.clientWidth <= 767) {
+	// 		const bubblesList = new Swiper('.js-bubbles-list', {
+	// 			spaceBetween: 0,
+	// 			slidesPerView: "auto",
+	// 			// loop: true,
+	// 			enabled: true,
+	// 			freeMode: true,
+	// 			breakpoints: {
+	// 				768: {
+	// 					enabled: false,
+	// 				},
+	// 			},
+	// 			grid: {
+	// 				rows: 2,
+	// 			},
+	// 			navigation: {
+	// 				nextEl: ".bubbles-list__next",
+	// 				prevEl: ".bubbles-list__prev",
+	// 			},
+	// 		});
+	// 	};
+	// };
+
+
 
 	if (document.querySelector('.jsBrandsList')) {
 		const brandsList = new Swiper('.jsBrandsList', {

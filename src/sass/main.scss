@@ -27,6 +27,7 @@
 @import "_top-menu";
 @import "_header-middle";
 @import "_header-bottom";
+@import "_mobile-menu";
 @import "_location";
 @import "_main-menu";
 @import "_secondary-menu";
@@ -41,4 +42,4 @@
 
 
 // Библиотеки и их кастомизация
-// @import "../libs/swiper-bundle.min";
+@import "../libs/swiper-bundle.min";

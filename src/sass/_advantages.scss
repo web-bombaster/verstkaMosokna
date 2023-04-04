@@ -13,9 +13,25 @@
 
     background-color: var(--color-gray-01);
     border-radius: var(--brs-grid);
+
+    @media (max-width: $break_md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $break_sm) {
+        padding: 16px;
+    }
+
+    @media (max-width: $break_xs) {
+        grid-template-columns: 1fr;
+    }
 }
 .advantages__item {
     padding: 16px;
+
+    @media (max-width: $break_sm) {
+        padding: 16px 0 0;
+    }
 }
 .advantages__title {
     display: flex;

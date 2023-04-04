@@ -8,7 +8,7 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
         const body = document.querySelector('body');
         const menu = document.querySelector('.mobile-menu');
 
-        if (!menuBtn.classList.contains('toggle')) {
+        if (menuBtn.classList.contains('toggle')) {
             menu.classList.add('toggle');
             body.classList.add('toggle');
         } else {
@@ -25,7 +25,21 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
         // heightMenuOverlay(); // меняем высоту оверлея меню при ресайзе
     }
 
-    menuBtn.addEventListener("click", menuToggle);
+
+	// Определяем высоту мобильного меню и размещаем под шапкой
+	function positionMobileMenu() {
+		const heightViewport = document.documentElement.clientHeight;
+		const heightHeader = document.querySelector('.header').offsetHeight;
+		const heightMenuOverlay = heightViewport - heightHeader;
+		let posTop = window.pageYOffset;
+
+		const menuActive = document.querySelector('.mobile-menu.toggle');
+
+		if (menuActive) {
+			menuActive.style.height = heightMenuOverlay + 'px';
+			menuActive.style.top = posTop + heightHeader + 'px';
+		};
+	};
 
     // Закрываем мобильное меню по клику вне его
     function closeMobileMenu() {
@@ -46,6 +60,9 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
         });
     };
 
+
+    menuBtn.addEventListener("click", menuToggle);
+    menuBtn.addEventListener("click", positionMobileMenu);
     closeMobileMenu();
 
 };

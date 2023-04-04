@@ -2,6 +2,7 @@
 }
 .subsections__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 .subsections__item {

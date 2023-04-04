@@ -4,10 +4,15 @@
 .services__container {
 }
 .services__list {
+    position: relative;
+
+
 }
 .services__wrapper {
-    display: flex;
+    // display: flex;
 
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
 }
 .services__item {
     border-radius: var(--brs-grid);
@@ -15,7 +20,7 @@
 }
 .services-item {
     background-color: var(--color-gray-01);
-    
+
     &:nth-child(3n+1) {
         background-color: #A4AB4B;
         color: #fff;
