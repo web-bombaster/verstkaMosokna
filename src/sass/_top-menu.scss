@@ -2,9 +2,22 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @media (max-width: $break_sm) {
+        // flex-wrap: wrap;
+        width: 100%;
+        display: grid;
+        grid-template-columns: min-content min-content max-content;
+        gap: 4px 16px;
+    }
 }
 .top-menu__item {
 }
 .top-menu__link {
     color: #fff;
+
+    @media (max-width: $break_sm) {
+        color: var(--color-text);
+        font-size: 12px;
+    }
 }

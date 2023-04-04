@@ -15,6 +15,9 @@
     }
 }
 .header-bottom__partner {
+    @media (max-width: $break_md) {
+        height: 15px;
+    }
 }
 .header-bottom__subsections {
 }

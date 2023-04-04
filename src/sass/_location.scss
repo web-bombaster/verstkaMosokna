@@ -17,8 +17,14 @@
 }
 
 .location__city-name {
-
+    @media (max-width: $break_sm) {
+        font-size: 12px;
+    }
 }
 
 .location__descr {
+    @media (max-width: $break_lg) {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
 }

@@ -3,8 +3,16 @@
     align-items: center;
 
     margin-right: auto;
+
+    @media (max-width: 880px) {
+        flex-direction: column;
+    }
 }
 .main-menu__item {
+
+    @media (max-width: 880px) {
+        width: 100%;
+    }
 
     .active {
         background-color: var(--color-accent);

@@ -36,7 +36,7 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
 		const menuActive = document.querySelector('.mobile-menu.toggle');
 
 		if (menuActive) {
-			menuActive.style.height = heightMenuOverlay + 'px';
+			menuActive.style.minHeight = heightMenuOverlay + 'px';
 			menuActive.style.top = posTop + heightHeader + 'px';
 		};
 	};
