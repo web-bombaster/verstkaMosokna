@@ -47,6 +47,20 @@
         overflow-y: auto;
     }
 
+    .btn {
+        margin-top: 0;
+        justify-content: center;
+
+        width: 100%;
+        padding: 12px;
+
+        // text-align: center;
+    }
+
+    .mobile-menu__account--btn {
+        background-color: var(--color-gray-01);
+    }
+
 }
 
 .mobile-menu__wrapper {
@@ -80,7 +94,10 @@
     margin-bottom: 20px;
 }
 
-.mobile-menu__top-menu {}
+.mobile-menu__top-menu {
+    margin-bottom: 28px;
+}
+
 .mobile-menu__account {}
 .mobile-menu__footer {}
 .mobile-menu__slogan {}

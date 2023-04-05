@@ -6,6 +6,7 @@
 
     @media (max-width: 880px) {
         flex-direction: column;
+        gap: 4px;
     }
 }
 .main-menu__item {
@@ -17,45 +18,85 @@
     .active {
         background-color: var(--color-accent);
         color: #fff;
+
+        @media (max-width: 880px) {
+            color: var(--color-accent);
+            background-color: transparent;
+        }
+
     }
 }
 
 .main-menu__item-icon {
     width: 16px;
     height: 16px;
+
+    @media (max-width: 880px) {
+        // display: none;
+    }
 }
 
 .main-menu__item-text {
-
+    font-family: 'Calibri';
 }
 
 .main-menu__link {
+    padding: 8px 12px;
+
     display: flex;
     align-items: center;
     gap: 8px;
 
     font-weight: 700;
-
-    padding: 8px 12px;
+    line-height: 1.12;
 
     border-radius: var(--brs);
+
+    @media (max-width: 880px) {
+        padding: 4px 0;
+
+        font-family: Calibri;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-accent);
+
+        background-color: transparent;
+    }
 }
+
 .main-menu__submenu {
     display: none;
+
+    @media (max-width: 880px) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 
     .header-bottom & {
         display: inline-flex;
         gap: 12px;
     }
+
+    .subsections__list {
+        display: none;
+    }
 }
 .main-menu__submenu-item {
 }
 .main-menu__submenu-link {
-    font-family: 'Calibri';
     font-size: 18px;
     font-weight: 700;
 
+    @media (max-width: 880px) {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
     .active & {
-        color: var(--color-accent);
+        color: var(--color-gray-02);
     }
 }

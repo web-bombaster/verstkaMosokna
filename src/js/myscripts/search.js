@@ -1,7 +1,7 @@
 
 
 const openSearchPanel = () => {
-	let btnSearch = document.querySelector('.open-search');
+	let btnSearch = document.querySelector('.header-middle__btn--search');
 	let searchPanel = document.querySelector('.search');
 	let searchClose = document.querySelector('.search-close');
 	

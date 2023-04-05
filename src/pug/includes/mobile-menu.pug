@@ -2,11 +2,19 @@
     .mobile-menu__wrapper
         .mobile-menu__box
             .mobile-menu__payment
+                a(href="#").mobile-menu__payment--btn.btn
+                    svg.main-menu__item-icon
+                        use(xlink:href='img/sprite.svg#payment')
+                    span Оплата по договору онлайн
             .mobile-menu__region
             .mobile-menu__main-menu
             .mobile-menu__secondary-menu
             .mobile-menu__top-menu
             .mobile-menu__account
+                a(href="#").mobile-menu__account--btn.btn.btn__light
+                    svg.main-menu__item-icon
+                        use(xlink:href='img/sprite.svg#user')
+                    span Личный кабинет
         .mobile-menu__footer
             .mobile-menu__slogan
             .mobile-menu__partner

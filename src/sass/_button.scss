@@ -1,5 +1,7 @@
 .btn {
 	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	gap: 8px;
 
 	margin-top: 24px;
@@ -38,6 +40,8 @@
 	}
 
 	@media (max-width: $break_xs) {
+		flex-grow: 1;
+
 		padding: 8px 12px;
 		font-size: 14px;
 		line-height: 1.14;

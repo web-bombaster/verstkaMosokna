@@ -1,0 +1,10 @@
+.search
+	.container.search__container
+		.search__box
+			form.search-form( action="/search" method="GET")
+				input.search-field(type="search" name="search" placeholder="Стоимость остекления квартиры...")
+				//- button.btn-search(type="submit" aria-label="Найти")
+				button.btn-search.btn.btn__dark(type="submit") Найти
+				button.search-close(type="button" aria-label="Закрыть панель поиска")
+					svg.main-menu__item-icon
+						use(xlink:href='img/sprite.svg#close')

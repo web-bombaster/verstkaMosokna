@@ -1,7 +1,6 @@
 if (document.querySelector('.jsMobileMenuBtnToggle')) {
 
     const menuBtn = document.querySelector('.jsMobileMenuBtnToggle');
-    // console.log(menuBtn);
 
     // Показать / скрыть мобильное меню
     function menuToggle() {
@@ -60,11 +59,108 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
         });
     };
 
-
     menuBtn.addEventListener("click", menuToggle);
     menuBtn.addEventListener("click", positionMobileMenu);
     closeMobileMenu();
-
 };
 
 
+
+
+
+// Для открывающихся пунктов меню по щелчку будем менять класс toggle
+// сделаю по клику потом переделать на ховер
+
+// function mobileMenuToggleSubmenu() {
+//     if (document.querySelector('.mobile-menu__main-menu .main-menu__submenu')) {
+//         const mobileMenuSubMenuOpenBtn = document.querySelectorAll('.main-menu__link');
+//         console.log(mobileMenuSubMenuOpenBtn);
+
+//         mobileMenuSubMenuOpenBtn.forEach(element => {
+//             element.addEventListener('click', function () {
+//                 // element.preventDefault();
+//                 element.classList.toggle('active');
+//             });
+//         });
+//     };
+// };
+
+// mobileMenuToggleSubmenu();
+// window.addEventListener("resize", mobileMenuToggleSubmenu);
+
+
+
+
+// Меню для ПК
+
+// Сделать инициализацию третьего уровня
+
+function pcMenuToggle2lvl() {
+    if (document.querySelector('.main-menu__link')) {
+        const mainMenuLink = document.querySelectorAll('.main-menu__link');
+
+        const currentInitBox = document.querySelector('.header-bottom__box'); // куда будем записывать при инициализации
+        const currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // какой элемент копируем
+        const newInitEl = currentInitEl.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
+        currentInitBox.prepend(newInitEl);
+
+
+        mainMenuLink.forEach(element => {
+            // Поменять класс активности у раздела по наведению
+            element.addEventListener('mouseenter', function (e) {
+                e.preventDefault();
+
+                mainMenuLink.forEach(element => {
+                    element.classList.remove('active');
+                });
+                element.classList.toggle('active');
+
+                // Склонировать в панель второго уровня .header-bottom__box подпункты активного раздела
+                // const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // куда будем вставлять
+                const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // какой элемент будем перезаписывать
+                const oldNode = e.target.closest('.main-menu__link').nextElementSibling; // откуда берем код
+                const newNode = oldNode.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
+
+                currentNode.parentNode.replaceChild(newNode, currentNode);
+            });
+        });
+    };
+};
+
+pcMenuToggle2lvl();
+window.addEventListener("resize", pcMenuToggle2lvl);
+
+
+// function pcMenuToggle3lvl() {
+//     if (document.querySelector('.main-menu__submenu-item')) {
+//         const mainMenuLink = document.querySelectorAll('.main-menu__submenu-item');
+
+//         mainMenuLink.forEach(element => {
+//             // Поменять класс активности у подраздела по наведению
+//             element.addEventListener('mouseenter', function (e) {
+//                 e.preventDefault();
+
+//                 mainMenuLink.forEach(element => {
+//                     element.classList.remove('active');
+//                 });
+//                 element.classList.toggle('active');
+
+//                 // Склонировать в панель третьего уровня .header-bottom__box подпункты активного раздела
+//                 const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // куда будем вставлять
+//                 const oldNode = e.target.closest('.main-menu__link').nextElementSibling; // откуда берем код
+//                 const newNode = oldNode.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
+
+//                 currentNode.parentNode.replaceChild(newNode, currentNode);
+//             });
+//         });
+//     };
+// };
+
+// pcMenuToggle3lvl();
+// window.addEventListener("resize", pcMenuToggle3lvl);
+
+
+
+
+// Поменять класс активности у раздела второго уровня по наведению
+// Склонировать в панель третьего уровня подпункты активного подраздела
