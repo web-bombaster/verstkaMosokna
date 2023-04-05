@@ -96,7 +96,7 @@
         font-weight: 400;
     }
 
-    .active & {
-        color: var(--color-gray-02);
+    &.active {
+        color: var(--color-accent);
     }
 }
