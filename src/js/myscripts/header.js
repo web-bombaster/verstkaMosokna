@@ -21,15 +21,14 @@ window.addEventListener("resize", headerFixed);
 window.addEventListener("resize", headerBtnPhone);
 
 
-//
+// Показать / скрыть разделы страницы
 function togglePageSections() {
     if (document.querySelector('.subsections-btn')) {
-        const btnToggle = document.querySelector('.subsections-btn');
-        const subsections = document.querySelector('.subsections');
+        const btnToggle = document.querySelector('.subsections-btn'); // кнопка переключения
+        const subsections = document.querySelector('.subsections'); // список разделов
+        let flag = true; // проверка состояния включалась ли прокрутка. flag = false - прокрутка уже была включена
 
-        let flag = true;
-
-        btnToggle.style.display = 'none';
+        btnToggle.style.display = 'none'; // изначально скрываем кнопку
 
         // Если Viewport <= 768 активируем переключатель разделов страницы
         function checkMobile() {
@@ -40,9 +39,10 @@ function togglePageSections() {
                 headerFixed();
 
                 document.querySelector('.jsMobileMenuBtnToggle').addEventListener('click', function() {
-                    btnToggle.classList.add('toggle');
-                    subsections.style.display = 'none';
-                    headerFixed();
+                    // btnToggle.classList.add('toggle');
+                    // btnToggle.classList.remove('toggle');
+                    // subsections.style.display = 'none';
+                    // headerFixed();
                 });
 
             } else {
@@ -73,9 +73,10 @@ function togglePageSections() {
             if (flag != false) {
                 btnToggle.classList.add('toggle');
                 subsections.classList.add('toggle');
+                flag = false;
+                btnToggle.style.display = 'inline-flex';
+                subsections.style.display = 'none';
             };
-            btnToggle.style.display = 'inline-flex';
-            subsections.style.display = 'none';
         });
 
     };

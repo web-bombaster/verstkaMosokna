@@ -68,6 +68,8 @@ function pcMenuToggle2lvl() {
                 currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
                 pcMenuToggle3lvl(); // вызываем заполнение меню третьего уровня и при наведении на другой пункт меню первого уровня
+
+                headerFixed(); //
             });
         });
     };
@@ -173,6 +175,7 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
 
     menuBtn.addEventListener("click", menuToggle);
     menuBtn.addEventListener("click", positionMobileMenu);
+    // window.addEventListener("resize", positionMobileMenu);
     closeMobileMenu();
 };
 
