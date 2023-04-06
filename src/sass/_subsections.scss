@@ -1,4 +1,11 @@
 .subsections {
+    // display: block;
+    display: none;
+    padding-bottom: 20px;
+
+    &.toggle {
+        display: none;
+    }
 }
 .subsections__list {
     display: flex;
@@ -10,4 +17,29 @@
 .subsections__link {
     font-size: 14px;
     color: var(--color-gray-02);
+}
+
+.subsections__btn {
+}
+.subsections-btn {
+    margin-bottom: 20px;
+
+    // display: inline-flex;
+    // display: none;
+
+    align-items: center;
+    gap: 6px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    &.toggle {
+        // margin-bottom: 0;
+        display: inline-flex;
+    }
+}
+.subsections-btn__icon {
+}
+.subsections-btn__text {
 }

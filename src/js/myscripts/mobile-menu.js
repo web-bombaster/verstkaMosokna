@@ -1,109 +1,33 @@
-if (document.querySelector('.jsMobileMenuBtnToggle')) {
-
-    const menuBtn = document.querySelector('.jsMobileMenuBtnToggle');
-
-    // Показать / скрыть мобильное меню
-    function menuToggle() {
-        const body = document.querySelector('body');
-        const menu = document.querySelector('.mobile-menu');
-
-        if (menuBtn.classList.contains('toggle')) {
-            menu.classList.add('toggle');
-            body.classList.add('toggle');
-        } else {
-            menu.classList.remove('toggle');
-            body.classList.remove('toggle');
-        }
-
-        window.addEventListener('resize', function () {
-            menuBtn.classList.remove('toggle');
-            menu.classList.remove('toggle');
-            body.classList.remove('toggle');
-        }, true);
-
-        // heightMenuOverlay(); // меняем высоту оверлея меню при ресайзе
-    }
-
-
-	// Определяем высоту мобильного меню и размещаем под шапкой
-	function positionMobileMenu() {
-		const heightViewport = document.documentElement.clientHeight;
-		const heightHeader = document.querySelector('.header').offsetHeight;
-		const heightMenuOverlay = heightViewport - heightHeader;
-		let posTop = window.pageYOffset;
-
-		const menuActive = document.querySelector('.mobile-menu.toggle');
-
-		if (menuActive) {
-			menuActive.style.minHeight = heightMenuOverlay + 'px';
-			menuActive.style.top = posTop + heightHeader + 'px';
-		};
-	};
-
-    // Закрываем мобильное меню по клику вне его
-    function closeMobileMenu() {
-        const btnMenu = document.querySelector('.jsMobileMenuBtnToggle');
-        const body = document.querySelector('body');
-        const menu = document.querySelector('.mobile-menu');
-
-        document.addEventListener("click", function (e) {
-            const target = e.target;
-            const its_menu = target == menu || menu.contains(target);
-            const its_btnMenu = target == btnMenu;
-
-            if (!its_menu && !its_btnMenu) {
-                menuBtn.classList.remove('toggle');
-                menu.classList.remove('toggle');
-                body.classList.remove('toggle');
-            }
-        });
-    };
-
-    menuBtn.addEventListener("click", menuToggle);
-    menuBtn.addEventListener("click", positionMobileMenu);
-    closeMobileMenu();
-};
-
-
-
-
-
-// Для открывающихся пунктов меню по щелчку будем менять класс toggle
-// сделаю по клику потом переделать на ховер
-
-// function mobileMenuToggleSubmenu() {
-//     if (document.querySelector('.mobile-menu__main-menu .main-menu__submenu')) {
-//         const mobileMenuSubMenuOpenBtn = document.querySelectorAll('.main-menu__link');
-//         console.log(mobileMenuSubMenuOpenBtn);
-
-//         mobileMenuSubMenuOpenBtn.forEach(element => {
-//             element.addEventListener('click', function () {
-//                 // element.preventDefault();
-//                 element.classList.toggle('active');
-//             });
-//         });
-//     };
-// };
-
-// mobileMenuToggleSubmenu();
-// window.addEventListener("resize", mobileMenuToggleSubmenu);
-
-
-
-
 // Меню для ПК
 // Раздаем первоначальные классы активности пунктам меню при загрузке страницы
+// Предварительно проверяем, есть ли уже эти классы в разметке. Если есть, то не добавляем.
 function addClassActive() {
-    let flag;
     if (document.querySelector('.main-menu__link')) {
+
+        let flag;
+        let flagLvl2;
+
         document.querySelectorAll('.main-menu__link').forEach(element => {
             if (!element.classList.contains('active')) {
-                const lvl1 = document.querySelector('.main-menu__link');
-                lvl1.classList.add('active');
-                const lvl2 = document.querySelector('.main-menu__link.active').nextElementSibling.querySelector('.main-menu__submenu-link');
-                lvl2.classList.add('active');
+                flag = true;
             };
         });
+
+        if (flag) {
+            document.querySelector('.main-menu__link').classList.add('active');
+        };
+
+        const lvl2 = document.querySelector('.main-menu__link.active').nextElementSibling.querySelectorAll('.main-menu__submenu-link');
+
+        lvl2.forEach(element => {
+            if (!element.classList.contains('active')) {
+                flag = true;
+            };
+        });
+
+        if (flag) {
+            document.querySelector('.main-menu__link.active').nextElementSibling.querySelector('.main-menu__submenu-link').classList.add('active');
+        };
     };
 };
 addClassActive();
@@ -143,7 +67,7 @@ function pcMenuToggle2lvl() {
                 currentInitBox.innerHTML = ''; // предварительно все очищаем
                 currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
-                pcMenuToggle3lvl();
+                pcMenuToggle3lvl(); // вызываем заполнение меню третьего уровня и при наведении на другой пункт меню первого уровня
             });
         });
     };
@@ -151,7 +75,7 @@ function pcMenuToggle2lvl() {
 
 // Инициализация меню для ПК третьего уровня
 function pcMenuToggle3lvl() {
-    if (document.querySelector('.main-menu__submenu-link')) {
+    if (document.querySelector('.subsections')) {
 
         const mainMenuLink = document.querySelectorAll('.main-menu__submenu-link'); // все пункты второго уровня
         const currentInitBox = document.querySelector('.subsections'); // куда будем записывать меню третьего уровня
@@ -161,7 +85,7 @@ function pcMenuToggle3lvl() {
         newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель третьего уровня - не cons, т.к. будет изменяться
 
         currentInitBox.innerHTML = '';
-        currentInitBox.prepend(newInitEl);
+        currentInitBox.append(newInitEl);
 
         mainMenuLink.forEach(element => {
             // Поменять класс активности у раздела по наведению
@@ -175,7 +99,7 @@ function pcMenuToggle3lvl() {
                 newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель третьего уровня - не cons, т.к. будет изменяться
         
                 currentInitBox.innerHTML = '';
-                currentInitBox.prepend(newInitEl);
+                currentInitBox.append(newInitEl);
             });
         });
     };
@@ -185,3 +109,88 @@ pcMenuToggle2lvl();
 // window.addEventListener("resize", pcMenuToggle2lvl);
 
 pcMenuToggle3lvl();
+
+
+if (document.querySelector('.jsMobileMenuBtnToggle')) {
+
+    const menuBtn = document.querySelector('.jsMobileMenuBtnToggle');
+
+    // Показать / скрыть мобильное меню
+    function menuToggle() {
+        const body = document.querySelector('body');
+        const menu = document.querySelector('.mobile-menu');
+
+        if (!menuBtn.classList.contains('toggle')) {
+            menu.classList.add('toggle');
+            body.classList.add('toggle');
+        } else {
+            menu.classList.remove('toggle');
+            body.classList.remove('toggle');
+        }
+
+        window.addEventListener('resize', function () {
+            menuBtn.classList.remove('toggle');
+            menu.classList.remove('toggle');
+            body.classList.remove('toggle');
+        }, true);
+
+        // heightMenuOverlay(); // меняем высоту оверлея меню при ресайзе
+    }
+
+	// Определяем высоту мобильного меню и размещаем под шапкой
+	function positionMobileMenu() {
+		const heightViewport = document.documentElement.clientHeight;
+		const heightHeader = document.querySelector('.header').offsetHeight;
+		const heightMenuOverlay = heightViewport - heightHeader;
+		let posTop = window.pageYOffset;
+
+		const menuActive = document.querySelector('.mobile-menu.toggle');
+
+		if (menuActive) {
+			menuActive.style.height = heightMenuOverlay + 'px';
+			menuActive.style.top = posTop + heightHeader + 'px';
+		};
+	};
+
+    // Закрываем мобильное меню по клику вне его
+    function closeMobileMenu() {
+        const btnMenu = document.querySelector('.jsMobileMenuBtnToggle');
+        const body = document.querySelector('body');
+        const menu = document.querySelector('.mobile-menu');
+
+        document.addEventListener("click", function (e) {
+            const target = e.target;
+            const its_menu = target == menu || menu.contains(target);
+            const its_btnMenu = target == btnMenu;
+
+            if (!its_menu && !its_btnMenu) {
+                menuBtn.classList.remove('toggle');
+                menu.classList.remove('toggle');
+                body.classList.remove('toggle');
+            }
+        });
+    };
+
+    menuBtn.addEventListener("click", menuToggle);
+    menuBtn.addEventListener("click", positionMobileMenu);
+    closeMobileMenu();
+};
+
+
+
+// Для открывающихся пунктов меню по щелчку будем менять класс toggle
+function mobileMenuToggleSubmenu() {
+    if (document.querySelector('.mobile-menu .main-menu__link')) {
+        const mobileMenuSubMenuOpenBtn = document.querySelectorAll('.mobile-menu .main-menu__link');
+
+        mobileMenuSubMenuOpenBtn.forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.target.closest('.main-menu__link').classList.toggle('toggle');
+            });
+        });
+    };
+};
+
+// window.addEventListener("resize", mobileMenuToggleSubmenu);
+mobileMenuToggleSubmenu();
