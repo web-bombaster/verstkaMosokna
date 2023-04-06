@@ -92,34 +92,35 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
 
 
 // Меню для ПК
-// Раздаем первоначальные классы активности пунктам меню
+// Раздаем первоначальные классы активности пунктам меню при загрузке страницы
 function addClassActive() {
-    const lvl1 = document.querySelector('.main-menu__link');
-    lvl1.classList.add('active');
-    const lvl2 = document.querySelector('.main-menu__link.active').nextElementSibling.querySelector('.main-menu__submenu-link');
-    lvl2.classList.add('active');
+    let flag;
+    if (document.querySelector('.main-menu__link')) {
+        document.querySelectorAll('.main-menu__link').forEach(element => {
+            if (!element.classList.contains('active')) {
+                const lvl1 = document.querySelector('.main-menu__link');
+                lvl1.classList.add('active');
+                const lvl2 = document.querySelector('.main-menu__link.active').nextElementSibling.querySelector('.main-menu__submenu-link');
+                lvl2.classList.add('active');
+            };
+        });
+    };
 };
 addClassActive();
 
 
-
-// document.querySelector('.main-menu__link').classList.add('active');
-// document.querySelector('.main-menu__link.active .main-menu__submenu-link').classList.add('active');
-
+// Инициализация меню для ПК второго уровня
 function pcMenuToggle2lvl() {
     if (document.querySelector('.main-menu__link')) {
-        const mainMenuLink = document.querySelectorAll('.main-menu__link');
+        const mainMenuLink = document.querySelectorAll('.main-menu__link'); // все пункты первого уровня
+        const currentInitBox = document.querySelector('.header-bottom__box'); // куда будем записывать меню второго уровня
+        let currentInitEl, newInitEl;
 
-        // document.querySelector('.main-menu__link').classList.add('active');
-        // document.querySelector('.main-menu__link.active .main-menu__submenu-link').classList.add('active');
+        currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // находим подменю второго уровня активного элемента первого уровня для копирования - не cons, т.к. будет изменяться
+        newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель второго уровня - не cons, т.к. будет изменяться
 
-        // Инициализация меню для ПК второго уровня
-        const currentInitBox = document.querySelector('.header-bottom__box'); // куда будем записывать при инициализации
-        currentInitBox.innerHTML = '';
-        const currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // какой элемент копируем
-        const newInitEl = currentInitEl.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
-        currentInitBox.prepend(newInitEl);
-
+        currentInitBox.innerHTML = ''; // предварительно все очищаем
+        currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
         mainMenuLink.forEach(element => {
             // Поменять класс активности у раздела по наведению
@@ -129,68 +130,58 @@ function pcMenuToggle2lvl() {
                 });
                 element.classList.toggle('active');
 
+                // Чистим класс активности у пунктов второго уровня
+                document.querySelectorAll('.main-menu__submenu-link').forEach(element => {
+                    element.classList.remove('active');
+                });
 
-                e.preventDefault();
+                e.target.closest('.main-menu__link').nextElementSibling.querySelector('.main-menu__submenu-link').classList.add('active'); // даем класс активности нужному пункту второго уровня
 
-                e.target.closest('.main-menu__link').nextElementSibling.querySelector('.main-menu__submenu-link').classList.add('active');
+                currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // находим подменю второго уровня активного элемента первого уровня для копирования - не cons, т.к. будет изменяться
+                newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель второго уровня - не cons, т.к. будет изменяться
 
-                // Склонировать в панель второго уровня .header-bottom__box подпункты активного раздела
-                // const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // куда будем вставлять
-                const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // какой элемент будем перезаписывать
-                const oldNode = e.target.closest('.main-menu__link').nextElementSibling; // откуда берем код
-                const newNode = oldNode.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
+                currentInitBox.innerHTML = ''; // предварительно все очищаем
+                currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
-                currentNode.parentNode.replaceChild(newNode, currentNode);
+                pcMenuToggle3lvl();
             });
         });
     };
 };
 
+// Инициализация меню для ПК третьего уровня
 function pcMenuToggle3lvl() {
     if (document.querySelector('.main-menu__submenu-link')) {
 
-        const mainMenuLink = document.querySelectorAll('.main-menu__submenu-link');
+        const mainMenuLink = document.querySelectorAll('.main-menu__submenu-link'); // все пункты второго уровня
+        const currentInitBox = document.querySelector('.subsections'); // куда будем записывать меню третьего уровня
+        let currentInitEl, newInitEl;
 
-        // Инициализация меню для ПК третьего уровня
-        const currentInitBox = document.querySelector('.subsections'); // куда будем записывать при инициализации
+        currentInitEl = document.querySelector('.main-menu__submenu-link.active').nextElementSibling; // находим подменю третьего уровня активного элемента второго уровня для копирования - не cons, т.к. будет изменяться
+        newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель третьего уровня - не cons, т.к. будет изменяться
+
         currentInitBox.innerHTML = '';
-        const currentInitEl = document.querySelector('.main-menu__submenu-link.active').nextElementSibling; // какой элемент копируем
-        const newInitEl = currentInitEl.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
         currentInitBox.prepend(newInitEl);
-
-
 
         mainMenuLink.forEach(element => {
             // Поменять класс активности у раздела по наведению
             element.addEventListener('mouseenter', function (e) {
-                e.preventDefault();
-
                 mainMenuLink.forEach(element => {
                     element.classList.remove('active');
                 });
                 element.classList.toggle('active');
 
-                // Склонировать в панель третьего уровня .header-bottom__box подпункты активного раздела
-                // const currentNode = document.querySelector('.header-bottom__box>.main-menu__submenu'); // куда будем вставлять
-                const currentNode = document.querySelector('.subsections>.subsections__list'); // какой элемент будем перезаписывать
-                const oldNode = e.target.closest('.main-menu__submenu-link').nextElementSibling; // откуда берем код
-                const newNode = oldNode.cloneNode(true); // новый элемент, который будем вставлять в панель второго уровня
-
-                currentNode.parentNode.replaceChild(newNode, currentNode);
+                currentInitEl = document.querySelector('.main-menu__submenu-link.active').nextElementSibling; // находим подменю третьего уровня активного элемента второго уровня для копирования - не cons, т.к. будет изменяться
+                newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель третьего уровня - не cons, т.к. будет изменяться
+        
+                currentInitBox.innerHTML = '';
+                currentInitBox.prepend(newInitEl);
             });
         });
     };
 };
 
-
 pcMenuToggle2lvl();
-window.addEventListener("resize", pcMenuToggle2lvl);
+// window.addEventListener("resize", pcMenuToggle2lvl);
 
 pcMenuToggle3lvl();
-window.addEventListener("resize", pcMenuToggle3lvl);
-
-
-
-
-// Поменять класс активности у раздела второго уровня по наведению
-// Склонировать в панель третьего уровня подпункты активного подраздела
