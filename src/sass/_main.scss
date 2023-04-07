@@ -244,6 +244,11 @@ h3:not([class]) {
 	@media screen and (max-width: $break_sm) {
 		display: block;
 	}
+
+	&.active {
+		color: #fff;
+		background-color: var(--color-text);
+	}
 }
 
 .swiper__prev {
@@ -253,9 +258,6 @@ h3:not([class]) {
 
 .swiper__next {
 	left: 70px;
-
-	color: #fff;
-	background-color: var(--color-text);
 }
 
 .swiper-button-disabled {

@@ -4,34 +4,28 @@
     align-self: flex-start;
     gap: 16px;
 
+    // overflow: hidden;
+
     @media (max-width: $break_sm) {
-        gap: 8px;
-        // display: block;
+        min-width: 100%;
+        padding-bottom: 16px;
+        max-height: 92px;
+
+        flex-wrap: nowrap;
+        gap: 0;
+        // overflow-x: auto;
     }
 }
 
-.js-bubbles-list {
-    // height: 140px;
-    width: 100%;
-    min-width: 500px;
-
-    // @media (max-width: $break_sm) {
-    //     min-width: inherit;
-    // }
-
-}
-
 .bubbles__item {
-    height: auto !important;
     width: auto !important;
-
-    // @media (max-width: $break_sm) {
-    //     height: 40px !important;
-    // }
+    height: auto !important;
 }
 
 .bubbles__link {
     padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
 
     display: inline-flex;
     justify-content: center;
@@ -52,9 +46,10 @@
 }
 
 .js-bubbles-list {
+    width: 100%;
+    min-width: 500px;
+
     @media (max-width: $break_sm) {
-        // overflow: initial !important;
-        // height: auto !important;
         min-width: auto;
     }
 }

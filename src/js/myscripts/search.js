@@ -1,15 +1,11 @@
 
 
 const openSearchPanel = () => {
-	// const heightSearchPanel = document.querySelector('.header').offsetHeight - document.querySelector('.header-top').offsetHeight - document.querySelector('.header-middle').offsetHeight;
 	const heightSearchPanel = document.querySelector('.header-bottom').offsetHeight;
 	const topSearchPanel = document.querySelector('.header-bottom').getBoundingClientRect().top;
-	// const topSearchPanel = document.querySelector('.header-bottom').getBoundingClientRect().top + window.pageYOffset;
 
-	console.log('topSearchPanel - ' + topSearchPanel);
-	console.log('heightSearchPanel - ' + heightSearchPanel);
-
-	// const heightHeader = document.querySelector('.header').offsetHeight; // высота хедера
+	// console.log('topSearchPanel - ' + topSearchPanel);
+	// console.log('heightSearchPanel - ' + heightSearchPanel);
 
 	let btnSearch = document.querySelector('.header-middle__btn--search');
 	let searchPanel = document.querySelector('.search');

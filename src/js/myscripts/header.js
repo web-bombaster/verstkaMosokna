@@ -82,3 +82,5 @@ function togglePageSections() {
     };
 };
 togglePageSections();
+
+// document.querySelector('.main-menu__item').click();

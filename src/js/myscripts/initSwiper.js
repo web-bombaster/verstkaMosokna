@@ -33,29 +33,32 @@ function initSwiper() {
 		});
 	};
 
-	// if (document.querySelector('.js-bubbles-list')) {
-	// 	if (document.documentElement.clientWidth <= 767) {
-	// 		const bubblesList = new Swiper('.js-bubbles-list', {
-	// 			spaceBetween: 0,
-	// 			slidesPerView: "auto",
-	// 			// loop: true,
-	// 			enabled: true,
-	// 			freeMode: true,
-	// 			breakpoints: {
-	// 				768: {
-	// 					enabled: false,
-	// 				},
-	// 			},
-	// 			grid: {
-	// 				rows: 2,
-	// 			},
-	// 			navigation: {
-	// 				nextEl: ".bubbles-list__next",
-	// 				prevEl: ".bubbles-list__prev",
-	// 			},
-	// 		});
-	// 	};
-	// };
+	if (document.querySelector('.js-bubbles-list')) {
+		let bubblesList;
+		const sliderInit = () => {
+			bubblesList = new Swiper('.js-bubbles-list', {
+				spaceBetween: 16,
+				// slidesPerView: 1,
+				slidesPerView: "auto",
+				loop: true,
+				enabled: true,
+
+
+				navigation: {
+					nextEl: ".bubbles-list__next",
+					prevEl: ".bubbles-list__prev",
+				},
+			});
+		};
+
+		if (document.documentElement.clientWidth <= 768) {
+			sliderInit();
+		} else {
+			if (bubblesList) {
+				bubblesList.destroy();
+			};
+		};
+	};
 
 
 
@@ -96,9 +99,25 @@ function initSwiper() {
 window.addEventListener("resize", function () {
 	// setTimeout(initSwiper, 200);
 	initSwiper();
-	// swiper.init();
 });
 
 initSwiper();
 
+// Переключаем класс активности на стрелках сладера .slider-btn
+function sliderBtnActiveClassToggle(className) {
+	if (document.querySelector(className)) {
+		let sliderBtn = document.querySelectorAll(className);
+		sliderBtn.forEach(function(element) {
+			element.addEventListener('click', function(e) {
+				// У соседей удаляем класс активности
+				const adjacentNtns = this.parentNode.querySelectorAll(className);
+				adjacentNtns.forEach(function(element) {
+					element.classList.remove('active');
+				});
+				this.classList.add('active');
+			});
+		});
+	};
+};
 
+sliderBtnActiveClassToggle('.slider-btn');
