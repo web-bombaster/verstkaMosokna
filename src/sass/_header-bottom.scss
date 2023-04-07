@@ -15,6 +15,7 @@
     }
 }
 .header-bottom__partner {
+    order: 2;
     @media (max-width: $break_md) {
         height: 15px;
     }

@@ -32,7 +32,9 @@
     height: 16px;
 
     @media (max-width: 880px) {
-        display: none;
+        .main-menu__link & {
+            display: none;
+        }
     }
 }
 
@@ -125,6 +127,10 @@
     @media (max-width: 880px) {
         font-size: 16px;
         font-weight: 400;
+
+        &.active {
+            color: var(--color-gray-02);
+        }
     }
 
     &.active {

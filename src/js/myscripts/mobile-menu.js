@@ -43,7 +43,11 @@ function pcMenuToggle2lvl() {
         currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // находим подменю второго уровня активного элемента первого уровня для копирования - не cons, т.к. будет изменяться
         newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель второго уровня - не cons, т.к. будет изменяться
 
-        currentInitBox.innerHTML = ''; // предварительно все очищаем
+        // предварительно все очищаем
+        if (currentInitBox.querySelector('.main-menu__submenu')) {
+            currentInitBox.querySelector('.main-menu__submenu').remove();
+        }
+        // currentInitBox.innerHTML = ''; // предварительно все очищаем
         currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
         mainMenuLink.forEach(element => {
@@ -64,7 +68,13 @@ function pcMenuToggle2lvl() {
                 currentInitEl = document.querySelector('.main-menu__link.active').nextElementSibling; // находим подменю второго уровня активного элемента первого уровня для копирования - не cons, т.к. будет изменяться
                 newInitEl = currentInitEl.cloneNode(true); // создаем новый элемент, который будем вставлять в панель второго уровня - не cons, т.к. будет изменяться
 
-                currentInitBox.innerHTML = ''; // предварительно все очищаем
+                // предварительно все очищаем
+                if (currentInitBox.querySelector('.main-menu__submenu')) {
+                    currentInitBox.querySelector('.main-menu__submenu').remove();
+                }
+
+                // currentInitBox.innerHTML = ''; // предварительно все очищаем
+
                 currentInitBox.prepend(newInitEl); // Инициализация меню второго уровня
 
                 pcMenuToggle3lvl(); // вызываем заполнение меню третьего уровня и при наведении на другой пункт меню первого уровня

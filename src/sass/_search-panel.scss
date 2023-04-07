@@ -45,18 +45,21 @@
 
 .search {
 	position: absolute;
-	bottom: -5px;
+	bottom: 0;
     left: 0;
 	width: 100%;
 
 	transform: translateY(100%);
-	transition: .25s;
 	z-index: 100;
 
     background-color: #fff;
-	
-	&.active {	
+    opacity: 1;
+
+	// transition: .25s;
+
+	&.active {
 		transform: translateY(0);
+        opacity: 1;
 	}
 }
 
@@ -65,11 +68,6 @@
 }
 
 .search__box {
-    // margin-left: auto;
-	// margin-right: auto;
-
-	// width: 100%;
-
     padding-top: 12px;
     padding-bottom: 12px;
 }
