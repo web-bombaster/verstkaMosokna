@@ -1,11 +1,10 @@
 // Меню для ПК
 // Раздаем первоначальные классы активности пунктам меню при загрузке страницы
 // Предварительно проверяем, есть ли уже эти классы в разметке. Если есть, то не добавляем.
-function addClassActive() {
+let addClassActive = function() {
     if (document.querySelector('.main-menu__link')) {
 
         let flag;
-        let flagLvl2;
 
         document.querySelectorAll('.main-menu__link').forEach(element => {
             if (!element.classList.contains('active')) {
@@ -31,10 +30,11 @@ function addClassActive() {
     };
 };
 addClassActive();
+// headerFixed();
 
 
 // Инициализация меню для ПК второго уровня
-function pcMenuToggle2lvl() {
+let pcMenuToggle2lvl = function() {
     if (document.querySelector('.main-menu__link')) {
         const mainMenuLink = document.querySelectorAll('.main-menu__link'); // все пункты первого уровня
         const currentInitBox = document.querySelector('.header-bottom__box'); // куда будем записывать меню второго уровня
@@ -86,7 +86,7 @@ function pcMenuToggle2lvl() {
 };
 
 // Инициализация меню для ПК третьего уровня
-function pcMenuToggle3lvl() {
+let pcMenuToggle3lvl = function() {
     if (document.querySelector('.subsections')) {
 
         const mainMenuLink = document.querySelectorAll('.main-menu__submenu-link'); // все пункты второго уровня
@@ -122,15 +122,19 @@ pcMenuToggle2lvl();
 
 pcMenuToggle3lvl();
 
+// После иниуиализации меню пересчитываем высоту шапки
+headerFixed();
 
 if (document.querySelector('.jsMobileMenuBtnToggle')) {
 
     const menuBtn = document.querySelector('.jsMobileMenuBtnToggle');
 
     // Показать / скрыть мобильное меню
-    function menuToggle() {
+    let menuToggle = function() {
         const body = document.querySelector('body');
         const menu = document.querySelector('.mobile-menu');
+
+        positionMobileMenu();
 
         if (!menuBtn.classList.contains('toggle')) {
             menu.classList.add('toggle');
@@ -147,25 +151,10 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
         }, true);
 
         // heightMenuOverlay(); // меняем высоту оверлея меню при ресайзе
-    }
-
-	// Определяем высоту мобильного меню и размещаем под шапкой
-	function positionMobileMenu() {
-		const heightViewport = document.documentElement.clientHeight;
-		const heightHeader = document.querySelector('.header').offsetHeight;
-		const heightMenuOverlay = heightViewport - heightHeader;
-		let posTop = window.pageYOffset;
-
-		const menuActive = document.querySelector('.mobile-menu.toggle');
-
-		if (menuActive) {
-			menuActive.style.height = heightMenuOverlay + 'px';
-			menuActive.style.top = posTop + heightHeader + 'px';
-		};
-	};
+    };
 
     // Закрываем мобильное меню по клику вне его
-    function closeMobileMenu() {
+    let closeMobileMenu = function() {
         const btnMenu = document.querySelector('.jsMobileMenuBtnToggle');
         const body = document.querySelector('body');
         const menu = document.querySelector('.mobile-menu');
@@ -184,15 +173,30 @@ if (document.querySelector('.jsMobileMenuBtnToggle')) {
     };
 
     menuBtn.addEventListener("click", menuToggle);
-    menuBtn.addEventListener("click", positionMobileMenu);
-    // window.addEventListener("resize", positionMobileMenu);
     closeMobileMenu();
 };
 
+// Определяем высоту мобильного меню и размещаем под шапкой
+let positionMobileMenu = function() {
+    const heightViewport = document.documentElement.clientHeight;
+    const heightHeader = document.querySelector('.header').offsetHeight;
+    // const heightHeader = document.querySelector('.header-top').offsetHeight + document.querySelector('.header-middle').offsetHeight;
 
+    const heightMenuOverlay = heightViewport - heightHeader;
+    let posTop = window.pageYOffset;
+
+    const menu = document.querySelector('.mobile-menu');
+    menu.style.height = heightMenuOverlay + 'px';
+    // menu.style.top = posTop + heightHeader + 'px';
+    menu.style.top = heightHeader + 'px';
+
+};
+
+positionMobileMenu();
+window.addEventListener("resize", positionMobileMenu);
 
 // Для открывающихся пунктов меню по щелчку будем менять класс toggle
-function mobileMenuToggleSubmenu() {
+let mobileMenuToggleSubmenu = function() {
     if (document.querySelector('.mobile-menu .main-menu__link')) {
         const mobileMenuSubMenuOpenBtn = document.querySelectorAll('.mobile-menu .main-menu__link');
 

@@ -47,6 +47,8 @@
 	position: absolute;
 	bottom: 0;
     left: 0;
+
+    display: none;
 	width: 100%;
 
 	transform: translateY(100%);
@@ -55,9 +57,12 @@
     background-color: #fff;
     opacity: 1;
 
+    transition: transform .25s;
+
 	// transition: .25s;
 
 	&.active {
+        display: block;
 		transform: translateY(0);
         opacity: 1;
 	}

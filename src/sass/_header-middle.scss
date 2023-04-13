@@ -63,6 +63,17 @@
     background-color: #F4F4F4;
     border-radius: var(--brs);
 
+    transition: .25s;
+
+    &:hover {
+        background-color: var(--color-accent);
+        color: #fff;
+
+        // .header-btn-phone__text {
+        //     color: #fff;
+        // }
+    }
+
     @media (max-width: $break_sm) {
         margin-right: 0;
         width: 48px;
@@ -114,6 +125,10 @@
 .header-middle__phone-number {
     font-size: 19px;
     font-weight: 800;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .header-middle__btns {
     display: flex;
@@ -125,9 +140,14 @@
     background-color: transparent;
 
     cursor: pointer;
-
 }
+
 .header-middle__btn--search {
+    border-radius: var(--brs);
+    transition: background-color .25s;
+    &:hover {
+        background-color: var(--color-gray-01);
+    }
 }
 .header-middle__btn--mobile-menu {
     display: none;

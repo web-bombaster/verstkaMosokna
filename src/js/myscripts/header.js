@@ -22,7 +22,7 @@ window.addEventListener("resize", headerBtnPhone);
 
 
 // Показать / скрыть разделы страницы
-function togglePageSections() {
+let togglePageSections = function() {
     if (document.querySelector('.subsections-btn')) {
         const btnToggle = document.querySelector('.subsections-btn'); // кнопка переключения
         const subsections = document.querySelector('.subsections'); // список разделов
@@ -31,28 +31,24 @@ function togglePageSections() {
         btnToggle.style.display = 'none'; // изначально скрываем кнопку
 
         // Если Viewport <= 768 активируем переключатель разделов страницы
-        function checkMobile() {
+        let checkMobile = function() {
             const widthViewport = document.documentElement.clientWidth;
             if (widthViewport <= 880) {
                 btnToggle.style.display = 'inline-flex';
                 btnToggle.classList.add('toggle');
                 headerFixed();
 
-                document.querySelector('.jsMobileMenuBtnToggle').addEventListener('click', function() {
-                    // btnToggle.classList.add('toggle');
-                    // btnToggle.classList.remove('toggle');
-                    // subsections.style.display = 'none';
-                    // headerFixed();
-                });
-
             } else {
-                subsections.style.display = 'block';
+                if (flag = true) {
+                    subsections.style.display = 'block';
+                };
             };
         };
         checkMobile();
         window.addEventListener("resize", checkMobile);
 
-        btnToggle.addEventListener('click', function() {
+        // Меняем состояние кнопки
+        let btnLvl3Toggole = function() {
             if (btnToggle.classList.contains('toggle')) {
                 flag = false;
                 btnToggle.querySelector('.subsections-btn__text').innerText = 'Скрыть подразделы';
@@ -67,18 +63,24 @@ function togglePageSections() {
             btnToggle.classList.toggle('toggle');
             subsections.classList.toggle('toggle');
             headerFixed();
-        });
+        };
 
-        window.addEventListener('scroll', function() {
-            if (flag != false) {
-                btnToggle.classList.add('toggle');
-                subsections.classList.add('toggle');
-                flag = false;
-                btnToggle.style.display = 'inline-flex';
-                subsections.style.display = 'none';
-            };
-        });
+        btnToggle.addEventListener('click', btnLvl3Toggole);
 
+        // Скрываем 3лвл меню за кнопку при скролле и при ресайзе
+        let hideLvl3 = function() {
+            btnToggle.classList.add('toggle');
+            subsections.classList.add('toggle');
+            flag = false;
+            btnToggle.style.display = 'inline-flex';
+            subsections.style.display = 'none';
+
+            btnToggle.querySelector('.subsections-btn__text').innerText = 'Разделы страницы';
+            btnToggle.querySelector('.subsections-btn__icon').setAttribute("src", "img/icons/list-ul.svg");
+        };
+
+        window.addEventListener('scroll', hideLvl3);
+        window.addEventListener('resize', hideLvl3);
     };
 };
 togglePageSections();

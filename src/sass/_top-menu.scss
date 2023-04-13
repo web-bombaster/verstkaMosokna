@@ -16,6 +16,10 @@
 .top-menu__link {
     color: #fff;
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     @media (max-width: $break_sm) {
         color: var(--color-text);
         font-size: 12px;

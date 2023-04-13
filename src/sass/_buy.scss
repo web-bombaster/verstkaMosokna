@@ -41,6 +41,12 @@
 
 .buy-top__descr {
     margin-bottom: 32px;
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }
 .buy-top__bubbles {
 }
@@ -168,4 +174,9 @@
     }
 }
 .buy-bottom__descr {
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }

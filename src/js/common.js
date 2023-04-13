@@ -2,8 +2,8 @@
 document.addEventListener(
 	"DOMContentLoaded", () => {
 		// include './myscripts/preloader.js'
-		// include './myscripts/mobile-menu.js'
 		// include './myscripts/header.js'
+		// include './myscripts/mobile-menu.js'
 		// include './myscripts/search.js'
 		// include './myscripts/burger.js'
 		// include './myscripts/form.js'
