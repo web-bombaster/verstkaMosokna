@@ -34,6 +34,9 @@
     }
 }
 .advantages__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+
     display: flex;
     align-items: center;
     gap: 4px;
@@ -48,4 +51,9 @@
 .advantages__title-text {
 }
 .advantages__descr {
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }

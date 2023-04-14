@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 27px;
+    gap: 16px;
 
     width: 33.333%;
 
@@ -109,6 +109,8 @@
 .buy-bottom__col-1 {
 }
 .buy-bottom__title {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .buy-bottom__img {
