@@ -33,6 +33,37 @@ function initSwiper() {
 		});
 	};
 
+	if (document.querySelector('.js-features-list')) {
+		const featuresList = new Swiper('.js-features-list', {
+			spaceBetween: 16,
+			slidesPerView: 1.3,
+			lazy: true,
+			loop: true,
+			autoHeight: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 16,
+					loop: true,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+					loop: true,
+				},
+			},
+			navigation: {
+				nextEl: ".features-list__next",
+				prevEl: ".features-list__prev",
+			},
+		});
+	};
+
 	if (document.querySelector('.js-bubbles-list')) {
 		let bubblesList;
 		const sliderInit = () => {

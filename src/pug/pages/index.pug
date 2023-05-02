@@ -1,18 +1,22 @@
 //- при сжатии страницы иногда третий уровень глючит, не исчезает
 
-//- при первоначальной загрузке страницы немного режется херо блок
+//- Слайдер services и Особенности системы REHAU Blitz™ - отключить на десктопе
 
 //- Важно!!! Если чистим папку dist, то после запуска сборщика нужно скопировать src/img/sprite.svg в dist/img/sprite.svg . Сборщик портит данный файл и спрайт некорректно отображается на сверстанной странице. Надо будет работу со спрайтами пофиксить.
 
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'window-system';
 
 
 //- home - главная страница
 if pageType === 'home'
 	include home
+
+//- window-system - Оконная система
+if pageType === 'window-system'
+	include window-system
 
 //- index - для показа верстки
 if pageType === 'index'
