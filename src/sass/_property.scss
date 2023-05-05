@@ -1,0 +1,74 @@
+@use "sass:math";
+
+.property {
+    margin-bottom: var(--indentBlocks);
+}
+
+.property__container {
+}
+
+.property__box {
+    padding: 16px 120px;
+
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    background-color: var(--color-gray-01);
+    border-radius: var(--brs-grid);
+
+    @media (max-width: 1600px) {
+        // padding: 16px 40px;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 16px 40px;
+        gap: 8px;
+    }
+
+    @media (max-width: $break_md) {
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 24px 40px;
+    }
+
+    @media (max-width: $break_xs) {
+        padding: 16px;
+        // gap: 16px 8px;
+        gap: 16px 0px;
+    }
+}
+
+.property__item {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    @media (max-width: $break_md) {
+        width: calc(100%/3 - 3*24px + 24px); // 24px - gap
+    }
+
+    // @media (max-width: $break_sm) {
+    //     width: calc(100%/3 - 3*24px + 24px); // 24px - gap
+    // }
+
+    @media (max-width: 720px) {
+        width: calc(100%/2 - 2*24px + 24px); // 8px - gap
+    }
+
+
+    @media (max-width: $break_xs) {
+        // width: calc(100%/2 - 2*8px + 8px); // 8px - gap
+        width: 50%; // 8px - gap
+    }
+}
+
+.property__text {
+
+}
+
+.property__digit {
+}

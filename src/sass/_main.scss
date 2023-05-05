@@ -60,9 +60,13 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 160rem;
+	max-width: 159.2rem;
 	margin: 0 auto;
 	padding: 0 3.2rem;
+
+	@media screen and (max-width: $break_md) {
+		padding: 0 3.2rem;
+	}
 
 	@media screen and (max-width: $break_md) {
 		padding: 0 2.8rem;
