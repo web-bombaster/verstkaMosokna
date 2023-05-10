@@ -127,24 +127,33 @@
 
         background-size: cover;
         background-position: left center;
-
-        fill: red;
-        filter: grayscale(0.5) blur(10px);
     }
 }
 .info-prop__item--temp {
     &::before {
         background-image: url('../img/icons/temp.svg');
+
+        @media (max-width: $break_sm) {
+            background-image: url('../img/icons/temp-dark.svg');
+        }
     }
 }
 .info-prop__item--space {
     &::before {
         background-image: url('../img/icons/space.svg');
+
+        @media (max-width: $break_sm) {
+            background-image: url('../img/icons/space-dark.svg');
+        }
     }
 }
 .info-prop__item--sound {
     &::before {
         background-image: url('../img/icons/sound.svg');
+
+        @media (max-width: $break_sm) {
+            background-image: url('../img/icons/sound-dark.svg');
+        }
     }
 }
 .cover__img {
