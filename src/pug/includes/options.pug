@@ -1,93 +1,305 @@
 .options
     .container.options__container
-        h2.h3 Дополнительные опции для окон
+        h2.h3.options__title Дополнительные опции для окон
 
-        .options__tabs.options-tabs
+        .options__box
 
-            .options-tabs__btn.options-btn
-                span.options-btn__item.h6 Цветные окна
-                span.options-btn__item.h6.toggle Подоконники
-                span.options-btn__item.h6 Ручки
-                span.options-btn__item.h6 Москитная сетка
-                span.options-btn__item.h6 Защита от солнца
+            .options__tabs.options-tabs
 
-            .options-tabs__descr.options-descr
+                .options-tabs__btn.options-btn
+                    span.options-btn__item.h6 Цветные окна
+                    span.options-btn__item.h6.toggle Подоконники
+                    span.options-btn__item.h6 Ручки
+                    span.options-btn__item.h6 Москитная сетка
+                    span.options-btn__item.h6 Защита от солнца
 
-                .options-descr__item
-                    p Контент первой вкладки
+                .options-tabs__descr.options-descr
 
-                .options-descr__item.toggle
-                    p.p-big Элегантная и современная коллекция декоров позволит посмотреть свежим взглядом на оформление окна и открыть новые возможности в дизайне Вашей комнаты. Поверхность подоконников устойчива к воздействию кислотосодержащих и химических чистящих средств, не выцветает под воздействием УФ лучей.
+                    .options-descr__item
+                        p Контент первой вкладки
 
-                    .row
-                        .left
+                    .options-descr__item.toggle
+                        p.p-big Элегантная и современная коллекция декоров позволит посмотреть свежим взглядом на оформление окна и открыть новые возможности в дизайне Вашей комнаты. Поверхность подоконников устойчива к воздействию кислотосодержащих и химических чистящих средств, не выцветает под воздействием УФ лучей.
 
-                            .options-type
-                                .options-type__current
-                                    .subtitle.caption Тип подоконника
-                                    .title.h5 Дизайнерская палитра
-                                    .icon
+                        .row
+                            .left
 
-                                //- .options-type__variants
-                                .options-type__variants
-                                    .variants-item.toggle Дизайнерская палитра
-                                    .variants-item 222 Дизайнерская палитра
-                                    .variants-item 333 Дизайнерская палитра
-                                    .variants-item 444 Дизайнерская палитра
-                                    .variants-item 555 Дизайнерская палитра
+                                .options-type
+                                    .options-type__current
+                                        .subtitle.caption Тип подоконника
+                                        .title.h5 Дизайнерская палитра
+                                        .icon
 
-                            p Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
-                            //-thumbnail
-                            .options-thumb
-                                img(src="img/content/options/thumbs/01.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/02.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/04.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/05.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/06.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/07.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/08.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/09.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/10.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/11.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/12.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/13.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/14.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/15.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/16.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/17.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/18.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/19.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/20.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/21.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/22.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/23.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/24.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/25.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/26.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/27.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/28.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/29.png", alt="").options-thumb__item
-                                img(src="img/content/options/thumbs/30.png", alt="").options-thumb__item
+                                    //- .options-type__variants
+                                    .options-type__variants
+                                        .variants-item.toggle Дизайнерская палитра
+                                        .variants-item 222 Дизайнерская палитра
+                                        .variants-item 333 Дизайнерская палитра
+                                        .variants-item 444 Дизайнерская палитра
+                                        .variants-item 555 Дизайнерская палитра
 
-                        .right
-                            .options__img-box(style="background-image: url('img/content/options/01.jpg');")
-                                .options__img.option-img.option-img__item.toggle
-                                    picture
-                                        source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
-                                        img(src="img/content/options/01.jpg" alt="" loading="lazy")
-                                .options__img.option-img.option-img__item
-                                    picture
-                                        source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
-                                        img(src="img/content/options/02.jpg" alt="" loading="lazy")
-                                .options__img.option-img.option-img__item
-                                    picture
-                                        source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
-                                        img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                .left-tabs
 
-                .options-descr__item
-                    p Контент третьей вкладки
-                .options-descr__item
-                    p Контент четвертой вкладки
-                .options-descr__item
-                    p Контент пятой вкладки
+                                    .left-tabs__item
+                                        p.options-text Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
+                                        //-thumbnail
+                                        .options-thumb
+                                            img(src="img/content/options/thumbs/01.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/02.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/04.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/05.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/06.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/07.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/08.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/09.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/10.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/11.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/12.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/13.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/14.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/15.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/16.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/17.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/18.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/19.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/20.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/21.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/22.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/23.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/24.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/25.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/26.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/27.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/28.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/29.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/30.png", alt="").options-thumb__item
+
+                                    .left-tabs__item
+                                        p.options-text 222 Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
+                                        //-thumbnail
+                                        .options-thumb
+                                            img(src="img/content/options/thumbs/02.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/01.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
+
+                                    .left-tabs__item
+                                        p.options-text 333 Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
+                                        //-thumbnail
+                                        .options-thumb
+                                            img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/02.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/01.png", alt="").options-thumb__item
+
+                                    .left-tabs__item
+                                        p.options-text 444 Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
+                                        //-thumbnail
+                                        .options-thumb
+                                            img(src="img/content/options/thumbs/04.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/02.png", alt="").options-thumb__item
+
+                                    .left-tabs__item
+                                        p.options-text 555 Дизайнерские подоконники Crystallit — это гордость предприятия-производителя. Глянцевые дизайнерские подоконники Кристаллит от глубокого красного, до нежного зеленого, от сияющего солнечного до многоцветного мозаичного – совершенно новый подход к философии оконного пространства.
+                                        //-thumbnail
+                                        .options-thumb
+                                            img(src="img/content/options/thumbs/05.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/04.png", alt="").options-thumb__item
+                                            img(src="img/content/options/thumbs/03.png", alt="").options-thumb__item
+
+
+
+                            .right
+
+                                .right-tabs
+
+                                    .right-tabs__item
+                                        .options__img-box(style="background-image: url('img/content/options/01.jpg');")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+
+                                    .right-tabs__item
+                                        .options__img-box(style="background-image: url('img/content/options/01.jpg');")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item.toggle
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+
+                                    .right-tabs__item
+                                        .options__img-box(style="background-image: url('img/content/options/01.jpg');")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item.toggle
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+
+                                    .right-tabs__item
+                                        .options__img-box(style="background-image: url('img/content/options/01.jpg');")
+                                            .options__img.option-img.option-img__item.toggle
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+
+                                    .right-tabs__item
+                                        .options__img-box(style="background-image: url('img/content/options/01.jpg');")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x")
+                                                    img(src="img/content/options/01.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item.toggle
+                                                picture
+                                                    source(srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x")
+                                                    img(src="img/content/options/02.jpg" alt="" loading="lazy")
+                                            .options__img.option-img.option-img__item
+                                                picture
+                                                    source(srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x")
+                                                    img(src="img/content/options/03.jpg" alt="" loading="lazy")
+
+
+                    .options-descr__item
+                        p Контент третьей вкладки
+                    .options-descr__item
+                        p Контент четвертой вкладки
+                    .options-descr__item
+                        p Контент пятой вкладки

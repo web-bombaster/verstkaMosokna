@@ -5,14 +5,19 @@
 
 // переключение табов - в качестве параметров функции будут передаваться классы для кнопок табов и содержимого табов
 const tabsToggle = function(tabBtn, tabContent) {
-    const tabBtnClass = tabBtn; // задаем класс кнопки таба
+    const tabBtnClass = tabBtn; // задаем селектор кнопки таба
+
+    // console.log('tabBtnClass' + document.querySelector(tabBtnClass));
+    // console.log('tabsToggle');
 
     if (document.querySelector(tabBtnClass)) {
 
-        const tabContentClass = tabContent; // задаем класс содержимого таба
+        const tabContentClass = tabContent; // задаем селектор содержимого таба
 
         const tabsBtn = document.querySelectorAll(tabBtnClass); // все кнопки табов
+
         const tabsContent = document.querySelectorAll(tabContentClass); // все содержимое табов
+
 
         // Перебираем кнопки табов, по которым можем щелкнуть
         tabsBtn.forEach(function(btn, index) {
@@ -43,4 +48,4 @@ const tabsToggle = function(tabBtn, tabContent) {
     };
 };
 
-tabsToggle();
+// tabsToggle();
