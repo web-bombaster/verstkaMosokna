@@ -31,11 +31,12 @@
     padding-left: 16px;
     padding-right: 16px;
 
+
     width: 40%;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     color: #fff;
 
@@ -58,6 +59,7 @@
 }
 
 .cover-info_box {
+    padding-top: 75px;
     max-width: 360px;
     width: 100%;
 
@@ -134,7 +136,7 @@
     &::before {
         background-image: url('../img/icons/temp.svg');
 
-        @media (max-width: $break_sm) {
+        @media (max-width: 767px) {
             background-image: url('../img/icons/temp-dark.svg');
         }
     }
@@ -143,7 +145,7 @@
     &::before {
         background-image: url('../img/icons/space.svg');
 
-        @media (max-width: $break_sm) {
+        @media (max-width: 767px) {
             background-image: url('../img/icons/space-dark.svg');
         }
     }
@@ -152,7 +154,7 @@
     &::before {
         background-image: url('../img/icons/sound.svg');
 
-        @media (max-width: $break_sm) {
+        @media (max-width: 767px) {
             background-image: url('../img/icons/sound-dark.svg');
         }
     }
@@ -186,4 +188,9 @@
         }
 
     }
+}
+
+.cover-info__btn {
+    margin-top: 11px;
+    width: 100%;
 }

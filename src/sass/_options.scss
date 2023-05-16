@@ -1,8 +1,8 @@
 @use "sass:math";
 
 .options {
+    margin-bottom: var(--indentBlocks);
     // padding: 24px;
-
 }
 
 .options__container {
@@ -40,7 +40,7 @@
     @media (max-width: $break_md) {
         gap: 16px;
 
-        padding-bottom: 10px;
+        padding-bottom: 2px;
         max-width: 100%;
 
         background-color: transparent;
@@ -66,7 +66,7 @@
 
     @media (max-width: $break_md) {
         min-width: auto;
-        padding: 10px 32px;
+        padding: 14px 32px 11px 32px;
 
         white-space: nowrap;
     }
@@ -220,6 +220,10 @@
 
 .options-text {
     margin-bottom: 24px;
+
+    @media (max-width: $break_md) {
+        line-height: 1.125;
+    }
 }
 
 .options-thumb {
