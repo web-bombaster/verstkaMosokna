@@ -1,0 +1,132 @@
+.prices-work {
+    .container {
+        // @media (max-width: 600px) {
+        //     padding-left: 0;
+        //     padding-right: 0;
+        // }
+    }
+}
+.container {
+}
+.prices-work__container {
+}
+.h3 {
+}
+.prices-work__box {
+    padding: 24px;
+
+    display: flex;
+    gap: 16px;
+
+    background-color: var(--color-gray-01);
+    border-radius: var(--brs-grid);
+
+    overflow: hidden;
+
+    @media (max-width: $break_md) {
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $break_sm) {
+        gap: 24px;
+    }
+
+    @media (max-width: 600px) {
+        margin-left: -2.8rem;
+        margin-right: -2.8rem;
+    }
+
+    @media screen and (max-width: $break_xs) {
+        margin-left: -1.6rem;
+        margin-right: -1.6rem;
+	}
+}
+.prices-work__item {
+    flex-basis: calc(100% / 4 - (3 * 16px) / 4);
+    flex-shrink: 0;
+
+    @media (max-width: $break_md) {
+        flex-basis: calc(100% / 2 - (1 * 16px) / 2);
+    }
+
+    @media (max-width: $break_sm) {
+        flex-basis: calc(100% / 2 - (1 * 24px) / 2);
+    }
+
+    @media (max-width: 600px) {
+        flex-basis: 100%;
+    }
+
+
+
+}
+.prices-work__title {
+    margin-bottom: 16px;
+}
+.prices-work__inner {
+    border-radius: var(--brs-grid);
+    overflow: hidden;
+
+    background-color: #fff;
+}
+.prices-work__img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+        height: 339px;
+        width: auto;
+        min-width: 100%;
+        object-fit: cover;
+
+        @media (max-width: $break_xs) {
+            height: auto;
+        }
+
+        // position: relative;
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+    }
+}
+.prices-work__info {
+    padding: 16px;
+
+    &:nth-child(odd) {
+        background-color: #3E3E40;
+        color: #fff;
+
+        .prices-work__price {
+            background-color: #fff;
+            color: #3E3E40;
+        }
+    }
+}
+.prices-work__subtitle {
+}
+.prices-work__descr {
+    margin-bottom: 8px;
+}
+.prices-work__price {
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+
+    background-color: #3E3E40;
+    color: #fff;
+
+    border-radius: 8px;
+}
+.prices-work__btn {
+    display: block;
+    margin-top: 16px;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    .prices-work & {
+        padding: 16px 24px;
+    }
+}

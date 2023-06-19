@@ -33,6 +33,36 @@ function initSwiper() {
 		});
 	};
 
+	if (document.querySelector('.js-types-work-list')) {
+		const servicesList = new Swiper('.js-types-work-list', {
+			spaceBetween: 16,
+			slidesPerView: 1.3,
+			lazy: true,
+			loop: true,
+			breakpoints: {
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 16,
+					loop: true,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 24,
+					loop: true,
+				},
+			},
+			navigation: {
+				nextEl: ".types-work__next",
+				prevEl: ".types-work__prev",
+			},
+		});
+	};
+
 	if (document.querySelector('.js-features-list')) {
 		const featuresList = new Swiper('.js-features-list', {
 			spaceBetween: 16,
