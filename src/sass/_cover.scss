@@ -6,7 +6,29 @@
     }
 }
 .cover__container {
+    position: relative;
+
+    .options-type {
+        position: absolute;
+        top: 24px;
+        left: 56px;
+
+        width: 360px;
+
+        @media (max-width: $break_md) {
+            width: 300px;
+        }
+
+        @media (max-width: 400px) {
+            width: 260px;
+            left: 30px;
+        }
+    }
 }
+
+.cover__wrapper {
+}
+
 .cover__box {
     display: flex;
     justify-content: space-between;
@@ -23,6 +45,20 @@
     @media (max-width: 767px) {
         flex-direction: column;
         height: auto;
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        &.toggle {
+            position: relative;
+            z-index: 1;
+        }
     }
 }
 .cover__info {
@@ -51,9 +87,9 @@
         width: 100%;
         order: 2;
 
-        color: var(--color-text);
+        // color: var(--color-text);
 
-        background-color: rgba(255, 255, 255, 0.7);
+        // background-color: rgba(255, 255, 255, 0.7);
 
     }
 }
@@ -136,27 +172,27 @@
     &::before {
         background-image: url('../img/icons/temp.svg');
 
-        @media (max-width: 767px) {
-            background-image: url('../img/icons/temp-dark.svg');
-        }
+        // @media (max-width: 767px) {
+        //     background-image: url('../img/icons/temp-dark.svg');
+        // }
     }
 }
 .info-prop__item--space {
     &::before {
         background-image: url('../img/icons/space.svg');
 
-        @media (max-width: 767px) {
-            background-image: url('../img/icons/space-dark.svg');
-        }
+        // @media (max-width: 767px) {
+        //     background-image: url('../img/icons/space-dark.svg');
+        // }
     }
 }
 .info-prop__item--sound {
     &::before {
         background-image: url('../img/icons/sound.svg');
 
-        @media (max-width: 767px) {
-            background-image: url('../img/icons/sound-dark.svg');
-        }
+        // @media (max-width: 767px) {
+        //     background-image: url('../img/icons/sound-dark.svg');
+        // }
     }
 }
 .cover__img {
@@ -193,4 +229,9 @@
 .cover-info__btn {
     margin-top: 11px;
     width: 100%;
+    height: 50px;
+}
+
+.cover__list {
+    position: relative;
 }

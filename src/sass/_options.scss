@@ -141,6 +141,8 @@
     overflow: hidden;
     background-color: #fff;
 
+    z-index: 2;
+
     &.toggle {
         overflow: initial;
     }
@@ -288,6 +290,7 @@
     picture, img {
         height: 520px;
         width: auto;
+        object-fit: cover;
 
         position: relative;
         z-index: 2;
