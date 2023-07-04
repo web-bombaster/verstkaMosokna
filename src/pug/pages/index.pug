@@ -10,10 +10,14 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'osteklenie';
 
 
-//- home - Балконы
+//- osteklenie - Стоимость остекления загородных домов
+if pageType === 'osteklenie'
+	include osteklenie
+
+//- balkony - Балконы
 if pageType === 'balkony'
 	include balkony
 
