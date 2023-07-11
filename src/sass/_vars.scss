@@ -41,7 +41,7 @@ $break_xxs: 330px;
     }
 
     // Отступы между блоками
-    --indentBlocks: 8rem;
+    --indentBlocks: 6rem;
     @media (max-width: $break_sm) {
         --indentBlocks: 6rem;
     }

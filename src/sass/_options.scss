@@ -33,8 +33,9 @@
 }
 .options-btn {
     display: inline-flex;
+    gap: 16px;
 
-    background-color: #fff;
+    // background-color: #fff;
     border-radius: var(--brs);
 
     @media (max-width: $break_md) {
@@ -44,19 +45,17 @@
         max-width: 100%;
 
         background-color: transparent;
-        // overflow-x: auto;
         overflow-x: auto;
+    }
 
-        // &::-webkit-scrollbar {
-        //     height: 0;
-        // }
-
+    @media (max-width: $break_xs) {
+        gap: 8px;
     }
 }
 .options-btn__item {
     flex-shrink: 0;
-    padding: 10px;
-    min-width: 180px;
+    padding: 10px 32px;
+    // min-width: 180px;
     text-align: center;
 
     background-color: #fff;
