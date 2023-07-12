@@ -93,8 +93,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: auto;
-		height: 100%;
+		width: 100%;
+		height: auto;
 		max-width: initial;
 
 		@media (max-width: 1400px) {
@@ -171,7 +171,16 @@
 .p {
 }
 .gp-item__btn {
+	margin-top: 57px;
 	width: 100%;
+
+	@media (max-width: $break_md) {
+		margin-top: 25px;
+	}
+
+	@media (max-width: $break_xs) {
+		margin-top: 16px;
+	}
 }
 .btn {
 }
