@@ -43,9 +43,15 @@
 
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    // gap: 42px;
 }
 .services-item__title {
 }
+.services-item__descr {
+    @include resetFirstLastMargin;
+    margin-top: 4px;
+}
 .services-item__btn {
+    // margin-top: 42px;
+    margin-top: 24px;
 }

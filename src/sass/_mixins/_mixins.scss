@@ -1,0 +1,13 @@
+@use "sass:math";
+
+// Убираем margin-top у первого дочернего элемента и margin-bottom у последнего
+@mixin resetFirstLastMargin {
+	& > * {
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
