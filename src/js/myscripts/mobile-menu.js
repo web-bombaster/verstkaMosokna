@@ -52,7 +52,8 @@ let pcMenuToggle2lvl = function() {
 
         mainMenuLink.forEach(element => {
             // Поменять класс активности у раздела по наведению
-            element.addEventListener('mouseenter', function (e) {
+            // element.addEventListener('mouseenter', function (e) {
+            element.addEventListener('click', function (e) {
                 mainMenuLink.forEach(element => {
                     element.classList.remove('active');
                 });
@@ -101,7 +102,8 @@ let pcMenuToggle3lvl = function() {
 
         mainMenuLink.forEach(element => {
             // Поменять класс активности у раздела по наведению
-            element.addEventListener('mouseenter', function (e) {
+            // element.addEventListener('mouseenter', function (e) {
+            element.addEventListener('click', function (e) {
                 mainMenuLink.forEach(element => {
                     element.classList.remove('active');
                 });
