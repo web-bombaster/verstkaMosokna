@@ -10,7 +10,7 @@
     justify-content: space-between;
     gap: var(--mainGap);
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b800) {
         flex-wrap: wrap;
     }
 }
@@ -36,14 +36,24 @@
     border-radius: var(--brs-grid);
     overflow: hidden;
 
-    // @media (max-width: $break_sm) {
-    //     padding-right: 24px;
-    //     padding-left: 24px;
-    // }
+    @media screen and (max-width: $b1400) {        
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
-    @media (max-width: $break_xs) {
-        padding-right: 16px;
-        padding-left: 16px;
+    @media screen and (max-width: $b800) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media screen and (max-width: $b800) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media (max-width: $b480) {
+        padding-right: 24px;
+        padding-left: 24px;
 
         min-height: 382px;
     }
@@ -51,7 +61,7 @@
 .hero-quiz__title {
     margin-bottom: 16px;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         br {
             display: none;
         }
@@ -71,7 +81,7 @@
 
     border: 0px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding: 16px 20px;
         margin-bottom: 16px;
     }
@@ -82,7 +92,7 @@
         color: var(--color-text);
         font-family: var(--font-family-accent);
 
-        @media (max-width: $break_xs) {
+        @media (max-width: $b480) {
             font-size: 14px;
         }
     }
@@ -98,13 +108,25 @@
 
     border-radius: var(--brs);
 
-    @media (max-width: $break_xs) {
+    @media screen and (max-width: $b1200) {
+        padding: 12px 16px;
+    }
+    
+    @media screen and (max-width: $b992) {
+        padding: 12px 16px;
+    }
+
+    @media screen and (max-width: $b768) {
+        padding: 12px 16px;
+    }
+
+    @media (max-width: $b480) {
         position: relative;
+        padding: 12px 16px;
+
         top: inherit;
         right: inherit;
         transform: inherit;
-
-        min-height: 50px;
 
         padding-top: 12px;
         padding-bottom: 12px;
@@ -136,20 +158,26 @@
 
     background-color: var(--color-accent);
 
-    @media (max-width: $break_lg) {
+    @media (max-width: $b1400) {
+        // max-width: initial;
+        min-width: 318px;
+    }
+
+    @media (max-width: $b1200) {
         max-width: calc(366px / 1200px * 100%);
     }
 
-    @media (max-width: $break_md) {
-        max-width: calc(296px / 992px * 100%);
+    @media (max-width: $b992) {
+        // max-width: calc(296px / 992px * 100%);
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b800) {
         max-width: 100%;
+        min-width: auto;
         flex-direction: row;
     }
 
-    @media (max-width: $break_s) {
+    @media (max-width: $b640) {
         flex-direction: column;
     }
 
@@ -157,11 +185,11 @@
 .hero-action__img {
     display: block;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b800) {
         width: 50%;
     }
 
-    @media (max-width: $break_s) {
+    @media (max-width: $b640) {
         width: 100%;
     }
 }
@@ -172,11 +200,11 @@
 
     padding: 24px;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b800) {
         width: 50%;
     }
 
-    @media (max-width: $break_s) {
+    @media (max-width: $b640) {
         width: 100%;
     }
 
@@ -185,7 +213,7 @@
     margin-bottom: 4px;
 }
 .hero-action__descr {
-    @media (max-width: $break_s) {
+    @media (max-width: $b640) {
         margin-bottom: 24px;
     }
 }

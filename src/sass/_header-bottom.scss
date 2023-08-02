@@ -16,7 +16,7 @@
 }
 .header-bottom__partner {
     order: 2;
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         height: 15px;
     }
 }

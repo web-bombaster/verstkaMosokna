@@ -4,12 +4,12 @@ $columns: 12;
 // $atom: (math.div(100%, $columns));
 $atom: math.div(100%, $columns);
 
-$break_lg: 1200px;
-$break_md: 992px;
-$break_ssm: 800px;
-$break_sm: 768px;
-$break_xs: 480px;
-$break_xxs: 330px;
+$b1200: 1200px;
+$b992: 992px;
+$b800: 800px;
+$b768: 768px;
+$b480: 480px;
+$b330: 330px;
 
 $offset: 30px;
 $offset_lg: $offset;
@@ -570,73 +570,73 @@ padding-right: #{calc(#{$val}+#{$offset_one_side})
 }
 
 @mixin lg($name, $value) {
-	@media screen and (max-width: $break_lg) {
+	@media screen and (max-width: $b1200) {
 		#{$name}: $value;
 	}
 }
 
 @mixin lg-block() {
-	@media screen and (max-width: $break_lg) {
+	@media screen and (max-width: $b1200) {
 		@content;
 	}
 }
 
 @mixin md($name, $value) {
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $b992) {
 		#{$name}: $value;
 	}
 }
 
 @mixin md-block() {
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $b992) {
 		@content;
 	}
 }
 
 @mixin ssm($name, $value) {
-	@media screen and (max-width: $break_ssm) {
+	@media screen and (max-width: $b800) {
 		#{$name}: $value;
 	}
 }
 
 @mixin ssm-block() {
-	@media screen and (max-width: $break_ssm) {
+	@media screen and (max-width: $b800) {
 		@content;
 	}
 }
 
 @mixin sm($name, $value) {
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $b768) {
 		#{$name}: $value;
 	}
 }
 
 @mixin sm-block() {
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $b768) {
 		@content;
 	}
 }
 
 @mixin xs($name, $value) {
-	@media screen and (max-width: $break_xs) {
+	@media screen and (max-width: $b480) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xs-block() {
-	@media screen and (max-width: $break_xs) {
+	@media screen and (max-width: $b480) {
 		@content;
 	}
 }
 
 @mixin xxs($name, $value) {
-	@media screen and (max-width: $break_xxs) {
+	@media screen and (max-width: $b330) {
 		#{$name}: $value;
 	}
 }
 
 @mixin xxs-block() {
-	@media screen and (max-width: $break_xxs) {
+	@media screen and (max-width: $b330) {
 		@content;
 	}
 }

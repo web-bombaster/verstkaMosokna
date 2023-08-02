@@ -1,7 +1,7 @@
 .mobile-menu-btn {
     display: none;
 
-    @media (max-width: $break_lg) {
+    @media (max-width: $b1200) {
         display: block;
     }
 }
@@ -28,7 +28,7 @@
     transition: transform .25s;
     // transition: left 1.25s, right .25s;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding: 16px;
         max-width: 100%;
     }

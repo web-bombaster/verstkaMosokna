@@ -3,7 +3,7 @@
     align-items: center;
     gap: 8px;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         // flex-wrap: wrap;
         width: 100%;
         display: grid;
@@ -20,7 +20,7 @@
         text-decoration: underline;
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         color: var(--color-text);
         font-size: 12px;
     }

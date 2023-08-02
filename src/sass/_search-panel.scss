@@ -14,19 +14,19 @@
     font-size: 14px;
     font-weight: 400;
 
-    @media (max-width: $break_lg) {
+    @media (max-width: $b1200) {
         padding: 10px 20px;
     }
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         padding: 10px 20px;
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         padding: 10px 20px;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding: 10px 20px;
 
         position: relative;
@@ -86,7 +86,7 @@
 
 	padding-right: 38px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding-right: 0;
 
         flex-wrap: wrap;
@@ -109,7 +109,7 @@
         background-size: cover;
         background-position: center;
 
-        @media (max-width: $break_xs) {
+        @media (max-width: $b480) {
             top: 12px;
             transform: none;
         }
@@ -132,7 +132,7 @@
 
     line-height: 1;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         width: 100%;
     }
 
@@ -144,7 +144,7 @@
         font-size: 20px;
         color: var(--color-gray-02);
 
-        @media (max-width: $break_sm) {
+        @media (max-width: $b768) {
             font-size: 16px;
         }
     }
@@ -170,7 +170,7 @@
 
 	cursor: pointer;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
 
         position: relative;
         transform: inherit;

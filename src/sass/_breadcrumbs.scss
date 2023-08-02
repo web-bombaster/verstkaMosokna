@@ -3,11 +3,11 @@
 	font-size: 14px;
 	color: #858585;
 
-	@media screen and (max-width: $break_md) {
+	@media screen and (max-width: $b992) {
 		font-size: 13px;
 	}
 
-	@media screen and (max-width: $break_sm) {
+	@media screen and (max-width: $b768) {
 		margin-top: 20px;
 	}
 

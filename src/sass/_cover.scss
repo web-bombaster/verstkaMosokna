@@ -1,7 +1,7 @@
 .cover {
     margin-bottom: 24px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin-bottom: 16px;
     }
 }
@@ -15,7 +15,7 @@
 
         width: 360px;
 
-        @media (max-width: $break_md) {
+        @media (max-width: $b992) {
             width: 300px;
         }
 
@@ -79,7 +79,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(25px);
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         width: 50%;
     }
 
@@ -99,7 +99,7 @@
     max-width: 360px;
     width: 100%;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         max-width: 344px;
     }
 
@@ -131,7 +131,7 @@
 .cover-info__text {
     margin-bottom: 24px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin-bottom: 20px;
     }
 
@@ -199,7 +199,7 @@
     width: 60%;
     overflow: hidden;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         width: 50%;
     }
 

@@ -15,7 +15,7 @@
     border-radius: var(--brs-grid);
     overflow: hidden;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding: 16px;
         gap: 16px;
     }
@@ -55,11 +55,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 16px;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         grid-template-columns: 1fr;
     }
 }

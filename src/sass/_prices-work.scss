@@ -23,11 +23,11 @@
 
     overflow: hidden;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         flex-wrap: wrap;
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         gap: 24px;
     }
 
@@ -36,7 +36,7 @@
         margin-right: -2.8rem;
     }
 
-    @media screen and (max-width: $break_xs) {
+    @media screen and (max-width: $b480) {
         margin-left: -1.6rem;
         margin-right: -1.6rem;
 	}
@@ -45,11 +45,11 @@
     flex-basis: calc(100% / 4 - (3 * 16px) / 4);
     flex-shrink: 0;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         flex-basis: calc(100% / 2 - (1 * 16px) / 2);
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         flex-basis: calc(100% / 2 - (1 * 24px) / 2);
     }
 
@@ -80,7 +80,7 @@
         min-width: 100%;
         object-fit: cover;
 
-        @media (max-width: $break_xs) {
+        @media (max-width: $b480) {
             height: auto;
         }
 

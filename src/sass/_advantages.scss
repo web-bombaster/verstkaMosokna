@@ -14,23 +14,37 @@
     background-color: var(--color-gray-01);
     border-radius: var(--brs-grid);
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         padding: 16px;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         grid-template-columns: 1fr;
     }
 }
 .advantages__item {
     padding: 16px;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         padding: 16px 0 0;
+
+        &:nth-child(odd) {
+            padding-right: 8px;
+        }
+        
+        &:nth-child(even) {
+            padding-left: 8px;            
+        }
+    }
+
+    @media screen and (max-width: $b480) {
+        &:nth-child(odd), &:nth-child(even) {
+            padding: 0 0 16px 0;
+        } 
     }
 }
 .advantages__title {

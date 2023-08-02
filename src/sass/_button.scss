@@ -21,25 +21,25 @@
 	transition: background-color .25s, color .25s, transform .25s;
 	cursor: pointer;
 
-	@media (max-width: $break_lg) {
+	@media (max-width: $b1200) {
 		padding: 16px 24px;
 		font-size: 16px;
 		line-height: 1.12;
 	}
 
-	@media (max-width: $break_md) {
+	@media (max-width: $b992) {
 		padding: 16px 24px;
 		font-size: 16px;
 		line-height: 1.12;
 	}
 
-	@media (max-width: $break_sm) {
+	@media (max-width: $b768) {
 		padding: 17px 16px;
 		font-size: 14px;
 		line-height: 1.14;
 	}
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $b480) {
 		flex-grow: 1;
 
 		padding: 8px 12px;
@@ -47,7 +47,7 @@
 		line-height: 1.14;
 	}
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $b480) {
 		padding: 17px 10px;
 		font-size: 12px;
 		line-height: 1.17;
@@ -86,6 +86,10 @@
         width: 28px;
         height: 18px;
     }
+
+	&.btn {
+		padding: 0;
+	}
 }
 
 .btn:hover {

@@ -57,11 +57,11 @@
 	font-size: 32px;
 	font-weight: 600;
 
-	@media (max-width: $break_lg) {
+	@media (max-width: $b1200) {
 		font-size: 26px;
 	}
 
-	@media (max-width: $break_md) {
+	@media (max-width: $b992) {
 		font-size: 22px;
 	}
 }
@@ -109,14 +109,14 @@
 	display: flex;
 	gap: 15px;
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $b480) {
 		flex-wrap: wrap;
 	}
 
 	.input-wrapper {
 		flex-basis: calc(50% - 1/2*15px);
 
-		@media (max-width: $break_xs) {
+		@media (max-width: $b480) {
 			flex-basis: 100%;
 
 			&:first-child input {
@@ -143,7 +143,7 @@
 	background-color: #F2F2F2;
 
 
-	@media (max-width: $break_md) {
+	@media (max-width: $b992) {
 		padding: 20px;
 	}
 

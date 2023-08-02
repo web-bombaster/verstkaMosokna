@@ -19,7 +19,7 @@
     position: relative;
     margin-bottom: 24px;
     
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin-bottom: 16px;
     }
 }
@@ -89,7 +89,7 @@
     background-color: #fff;
     border-radius: var(--brs-grid);
     
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin: 0 16px 16px 16px;
         padding: 16px;
     }
@@ -116,7 +116,7 @@
 
     max-width: 1000px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding: 0 16px;
     }
 }

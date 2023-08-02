@@ -1,19 +1,32 @@
 .bubbles {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     align-self: flex-start;
     gap: 16px;
 
-    // overflow: hidden;
-
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         min-width: 100%;
-        padding-bottom: 16px;
+        // margin-bottom: 16px;
         max-height: 92px;
 
         flex-wrap: nowrap;
         gap: 0;
         // overflow-x: auto;
+    }
+}
+
+
+
+.bubbles__btn-box {
+    display: none;
+    position: relative;
+    padding-bottom: 56px;
+
+    width: 100%;
+
+    @media screen and (max-width: $b768) {
+        display: block;
     }
 }
 
@@ -31,12 +44,12 @@
     justify-content: center;
     align-items: center;
 
-    border-radius: var(--brs);
+    border-radius: 8px;
     background-color: #fff;
 
     transition: transform .25s;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         font-size: 14px;
     }
 
@@ -48,8 +61,20 @@
 .js-bubbles-list {
     width: 100%;
     min-width: 500px;
+    
+    border-radius: var(--brs);
+    overflow: hidden;
 
-    @media (max-width: $break_sm) {
+    &.swiper {
+        padding-bottom: 0;
+        // padding-bottom: 96px;
+    }
+
+    @media screen and (max-width: $b768) {
+        height: 38px;
+    }
+
+    @media (max-width: $b768) {
         min-width: auto;
     }
 }

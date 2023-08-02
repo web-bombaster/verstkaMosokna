@@ -6,7 +6,7 @@
 
     font-size: 14px;
 
-    @media (max-width: $break_lg) {
+    @media (max-width: $b1200) {
         padding-top: 6px;
         padding-bottom: 6px;
     }
@@ -75,7 +75,7 @@
         // }
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         margin-right: 0;
         width: 48px;
         height: 48px;
@@ -100,7 +100,7 @@
     line-height: 10px;
     text-transform: uppercase;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         display: none;
     }
 }
@@ -114,7 +114,7 @@
     flex-direction: column;
     text-align: right;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         display: none;
     }
 }

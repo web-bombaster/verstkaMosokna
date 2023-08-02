@@ -14,7 +14,7 @@
     background-color: var(--color-gray-01);
     border-radius: var(--brs-grid);
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin-left: -16px;
         margin-right: -16px;
     }
@@ -33,7 +33,7 @@
     flex-direction: column;
     gap: 24px;
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         gap: 16px;
     }
 }
@@ -48,7 +48,7 @@
     // background-color: #fff;
     border-radius: var(--brs);
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         gap: 16px;
 
         padding-bottom: 2px;
@@ -58,7 +58,7 @@
         overflow-x: auto;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         gap: 8px;
     }
 }
@@ -73,7 +73,7 @@
     overflow: hidden;
     cursor: pointer;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         min-width: auto;
         padding: 14px 32px 11px 32px;
 
@@ -242,7 +242,7 @@
 .options-text {
     margin-bottom: 24px;
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         line-height: 1.125;
     }
 }

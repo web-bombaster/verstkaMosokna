@@ -18,7 +18,7 @@
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@media (max-width: $break_sm) {
+	@media (max-width: $b768) {
 		gap: 16px;
 		grid-template-columns: 1fr;
 	}
@@ -74,7 +74,7 @@
 		width: 100%;
 	}
 
-	@media (max-width: $break_sm) {
+	@media (max-width: $b768) {
 		width: 52%;
 		height: auto;
 	}
@@ -102,7 +102,7 @@
 			height: auto;
 		}
 
-		@media (max-width: $break_sm) {
+		@media (max-width: $b768) {
 			// width: auto;
 			// height: 100%;
 		}
@@ -116,7 +116,7 @@
 		width: 100%;
 	}
 
-	@media (max-width: $break_sm) {
+	@media (max-width: $b768) {
 		width: 48%;
 	}
 
@@ -124,7 +124,7 @@
         width: 100%;
     }
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $b480) {
 		padding: 16px;
 	}
 }
@@ -174,11 +174,11 @@
 	margin-top: 57px;
 	width: 100%;
 
-	@media (max-width: $break_md) {
+	@media (max-width: $b992) {
 		margin-top: 25px;
 	}
 
-	@media (max-width: $break_xs) {
+	@media (max-width: $b480) {
 		margin-top: 16px;
 	}
 }

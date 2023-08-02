@@ -12,7 +12,7 @@
     flex-wrap: wrap;
     gap: 12px;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         flex-direction: column;
         flex-wrap: nowrap;
         overflow-y: auto;
@@ -22,12 +22,12 @@
         max-height: 220px;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         max-height: 234px;
     }
 }
 .subsections__item {
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         position: relative;
 
         &::before {
@@ -46,7 +46,7 @@
     font-size: 14px;
     color: var(--color-gray-02);
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         color: var(--color-text);
     }
 }

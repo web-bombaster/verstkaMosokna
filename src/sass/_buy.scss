@@ -19,12 +19,12 @@
 
     background-color: var(--color-gray-01);
 
-    @media (max-width: $break_md) {
+    @media (max-width: $b992) {
         flex-wrap: wrap;
         gap: 0;
     }
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b768) {
         padding: 32px 16px;
     }
 }
@@ -63,12 +63,12 @@
     padding: 40px;
     background-color: var(--color-gray-03);
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b992) {
         flex-wrap: wrap;
         padding: 32px 16px;
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         padding-bottom: 0;
     }
 }
@@ -82,7 +82,7 @@
 
     width: 33.333%;
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b992) {
         padding: 0;
         width: calc(50% - 2 * 16px + 16px);
 
@@ -91,7 +91,7 @@
         // }
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         width: 100%;
         gap: 24px;
 
@@ -117,11 +117,7 @@
     width: 100%;
 }
 .buy-bottom__btn-box {
-    margin-top: auto;
 
-    @media (max-width: $break_md) {
-        margin-top: inherit;
-    }
 }
 .buy-bottom__btn {
     margin-top: 0;
@@ -144,7 +140,7 @@
     background-color: var(--color-accent);
     border-radius: var(--brs);
 
-    @media (max-width: $break_sm) {
+    @media (max-width: $b992) {
         margin-top: 40px;
         width: 100%;
         background-color: transparent;
@@ -156,7 +152,7 @@
         }
     }
 
-    @media (max-width: $break_xs) {
+    @media (max-width: $b480) {
         margin-top: 0;
         margin-left: -16px;
         margin-right: -16px;
