@@ -103,6 +103,10 @@
 
     background-color: var(--color-text);
     border-radius: var(--brs);
+
+    @media screen and (max-width: $b480) {
+        border-radius: 8px;
+    }
 }
 .product-item__descr {
     margin-bottom: 16px;

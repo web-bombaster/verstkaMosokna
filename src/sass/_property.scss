@@ -8,7 +8,7 @@
 }
 
 .property__box {
-    padding: 16px 120px;
+    padding: 16px 60px;
 
     display: flex;
     justify-content: center;
@@ -24,14 +24,19 @@
     }
 
     @media (max-width: 1200px) {
+        flex-wrap: wrap;
         padding: 16px 40px;
-        gap: 8px;
+        gap: 24px 8px;
     }
 
     @media (max-width: $b992) {
         flex-wrap: wrap;
         gap: 24px;
         padding: 24px 40px;
+    }
+
+    @media (max-width: $b768) {
+        padding: 24px;
     }
 
     @media (max-width: $b480) {
@@ -46,6 +51,10 @@
     flex-direction: column;
 
     text-align: center;
+
+    @media screen and (max-width: $b1200) {
+        width: calc(100%/3 - 3*24px + 24px); // 24px - gap
+    }
 
     @media (max-width: $b992) {
         width: calc(100%/3 - 3*24px + 24px); // 24px - gap
@@ -63,6 +72,7 @@
     @media (max-width: $b480) {
         // width: calc(100%/2 - 2*8px + 8px); // 8px - gap
         width: 50%; // 8px - gap
+        justify-content: center;
     }
 }
 

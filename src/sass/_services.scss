@@ -2,11 +2,26 @@
     margin-bottom: var(--indentBlocks);
 }
 .services__container {
+    position: relative;
+}
+.services__box {
+    position: relative;
+    padding-bottom: 56px;
+
+    display: none;
+
+    @media screen and (max-width: $b768) {
+        display: block;
+    }
 }
 .services__list {
     position: relative;
     border-radius: var(--brs-grid);
     overflow: hidden;
+    
+    &.swiper {
+        padding-bottom: 0;
+    }
 
 }
 .services__wrapper {

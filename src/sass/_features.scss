@@ -3,8 +3,27 @@
 }
 .features__container {
 }
+
+.features-box {
+    position: relative;
+    padding-top: 56px;
+
+    display: none;
+
+    @media screen and (max-width: $b768) {
+        display: block;
+    }
+}
+
 .features__list {
     position: relative;
+
+    border-radius: var(--brs-grid);
+    overflow: hidden;
+
+    &.swiper {
+        padding-bottom: 0;
+    }
 }
 
 .features__wrapper {

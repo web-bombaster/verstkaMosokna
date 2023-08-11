@@ -64,15 +64,14 @@
 .cover__info {
 }
 .cover-info {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
 
 
     width: 40%;
 
     display: flex;
     justify-content: center;
-    // align-items: center;
 
     color: #fff;
 
@@ -80,27 +79,34 @@
     backdrop-filter: blur(25px);
 
     @media (max-width: $b992) {
+        padding-left: 40px;
+        padding-right: 40px;
         width: 50%;
+
+        justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 767px) {
+        padding-left: 16px;
+        padding-right: 16px;
         width: 100%;
         order: 2;
-
-        // color: var(--color-text);
-
-        // background-color: rgba(255, 255, 255, 0.7);
 
     }
 }
 
 .cover-info_box {
     padding-top: 75px;
-    max-width: 360px;
     width: 100%;
+    
+    @media screen and (min-width: $b1200) {
+        max-width: 360px;        
+    }
 
     @media (max-width: $b992) {
         max-width: 344px;
+        padding-top: 0;
     }
 
     @media (max-width: 767px) {
@@ -126,6 +132,10 @@
     color: var(--color-text);
     border-radius: var(--brs);
     background-color: #fff;
+
+    @media screen and (max-width: $b480) {
+        border-radius: 8px;
+    }
 }
 
 .cover-info__text {
@@ -171,56 +181,40 @@
 .info-prop__item--temp {
     &::before {
         background-image: url('../img/icons/temp.svg');
-
-        // @media (max-width: 767px) {
-        //     background-image: url('../img/icons/temp-dark.svg');
-        // }
     }
 }
 .info-prop__item--space {
     &::before {
         background-image: url('../img/icons/space.svg');
-
-        // @media (max-width: 767px) {
-        //     background-image: url('../img/icons/space-dark.svg');
-        // }
     }
 }
 .info-prop__item--sound {
     &::before {
         background-image: url('../img/icons/sound.svg');
-
-        // @media (max-width: 767px) {
-        //     background-image: url('../img/icons/sound-dark.svg');
-        // }
     }
 }
 .cover__img {
     width: 60%;
+    height: 100%;
     overflow: hidden;
 
     @media (max-width: $b992) {
-        width: 50%;
+        width: 100%;
     }
 
     @media (max-width: 767px) {
-        width: 100%;
-        padding-top: 60%;
-        height: 0;
-
-        // height: 440px;
-        // height: 60%;
+        height: 304px;
+        height: calc( var(--indexRatio) * 68 );
     }
 
     picture {
         width: 100%;
+        height: 100%;
 
         img {
             width: 100%;
-
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            height: 100%;
+            object-fit: cover;
         }
 
     }
