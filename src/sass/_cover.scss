@@ -199,12 +199,13 @@
     overflow: hidden;
 
     @media (max-width: $b992) {
-        width: 100%;
+        width: 50%;
     }
 
     @media (max-width: 767px) {
         height: 304px;
         height: calc( var(--indexRatio) * 68 );
+        width: 100%;
     }
 
     picture {
