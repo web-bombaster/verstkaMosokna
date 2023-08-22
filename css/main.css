@@ -2936,6 +2936,7 @@ h3:not([class]) {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1200px) {
   .property__item {

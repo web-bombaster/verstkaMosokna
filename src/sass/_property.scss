@@ -51,6 +51,7 @@
     flex-direction: column;
 
     text-align: center;
+    justify-content: center;
 
     @media screen and (max-width: $b1200) {
         width: calc(100%/3 - 3*24px + 24px); // 24px - gap
