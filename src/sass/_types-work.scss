@@ -27,11 +27,16 @@
     display: flex;
     flex-direction: column;
 
+    
     background-color: var(--color-gray-01);
     border-radius: var(--brs-grid);
     overflow: hidden;
-
+    
     transition: transform .25s;
+    
+    .types-work & {
+        height: initial;
+    }
 
     &:hover {
         transform: translateY(-2px);

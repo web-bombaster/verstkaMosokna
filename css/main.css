@@ -2743,6 +2743,9 @@ h3:not([class]) {
   overflow: hidden;
   transition: transform 0.25s;
 }
+.types-work .types-work__item {
+  height: initial;
+}
 .types-work__item:hover {
   transform: translateY(-2px);
 }
