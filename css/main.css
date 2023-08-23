@@ -845,7 +845,7 @@ h3:not([class]) {
   bottom: 2px;
   height: 4rem;
   width: 6rem;
-  border-radius: var(--brs);
+  border-radius: 8px;
   background-color: var(--color-gray-01);
   z-index: 1;
   cursor: pointer;
@@ -1866,6 +1866,7 @@ h3:not([class]) {
 }
 
 .hero-quiz__title {
+  margin-top: 0;
   margin-bottom: 16px;
 }
 @media (max-width: 992px) {
@@ -2624,6 +2625,10 @@ h3:not([class]) {
   overflow: hidden;
 }
 
+.examples-works .examples-works__item {
+  height: initial;
+}
+
 .examples-works-item {
   display: flex;
   border-radius: var(--brs-grid);
@@ -2638,6 +2643,7 @@ h3:not([class]) {
 
 .examples-works-item__img {
   width: 50%;
+  height: 400px;
   overflow: hidden;
 }
 @media (max-width: 1200px) {
@@ -2648,7 +2654,7 @@ h3:not([class]) {
 }
 @media (max-width: 768px) {
   .examples-works-item__img {
-    height: 318px;
+    min-height: 352px;
   }
 }
 @media (max-width: 480px) {
@@ -2718,6 +2724,17 @@ h3:not([class]) {
   margin-bottom: var(--indentBlocks);
 }
 
+.types-work__box {
+  border-radius: var(--brs-grid);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .types-work__list {
+    padding-bottom: 0;
+  }
+}
+
 .types-work__item {
   display: flex;
   flex-direction: column;
@@ -2738,6 +2755,11 @@ h3:not([class]) {
 .types-work__info {
   padding: 24px;
 }
+@media screen and (max-width: 480px) {
+  .types-work__info {
+    padding: 16px;
+  }
+}
 
 .types-work__descr {
   margin-bottom: 16px;
@@ -2752,9 +2774,17 @@ h3:not([class]) {
   padding: 8px 16px;
   color: #fff;
   background-color: var(--color-text);
-  border-radius: var(--brs);
+  border-radius: 8px;
 }
 
+.types-work__btn-box {
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.prices-work {
+  margin-bottom: var(--indentBlocks);
+}
 .prices-work__box {
   padding: 24px;
   display: flex;
@@ -2763,7 +2793,7 @@ h3:not([class]) {
   border-radius: var(--brs-grid);
   overflow: hidden;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .prices-work__box {
     flex-wrap: wrap;
   }
@@ -2773,10 +2803,9 @@ h3:not([class]) {
     gap: 24px;
   }
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .prices-work__box {
-    margin-left: -2.8rem;
-    margin-right: -2.8rem;
+    padding: 16px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2790,7 +2819,7 @@ h3:not([class]) {
   flex-basis: calc(25% - 12px);
   flex-shrink: 0;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .prices-work__item {
     flex-basis: calc(50% - 8px);
   }
@@ -2808,6 +2837,11 @@ h3:not([class]) {
 
 .prices-work__title {
   margin-bottom: 16px;
+}
+@media screen and (max-width: 480px) {
+  .prices-work__title {
+    margin-bottom: 8px;
+  }
 }
 
 .prices-work__inner {
@@ -2983,10 +3017,17 @@ h3:not([class]) {
     width: 300px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .cover__container .options-type {
-    width: 260px;
-    left: 30px;
+    width: calc(100% - 56px - 32px);
+    left: 44px;
+    top: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cover__container .options-type {
+    width: calc(100% - 64px);
+    left: 32px;
   }
 }
 
@@ -3297,7 +3338,7 @@ h3:not([class]) {
   padding-left: 12px;
   padding-right: 12px;
   margin-bottom: 26px;
-  border-radius: var(--brs);
+  border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
   z-index: 2;

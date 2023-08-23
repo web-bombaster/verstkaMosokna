@@ -19,10 +19,21 @@
             width: 300px;
         }
 
-        @media (max-width: 400px) {
-            width: 260px;
-            left: 30px;
+        @media (max-width: 767px) {
+            width: calc(100% - 28px*2 - 16px*2);
+            left: 44px;
+            top: 16px;
         }
+
+        @media screen and (max-width: $b480) {
+            width: calc(100% - 16px*4);
+            left: 32px;
+        }
+
+        // @media (max-width: 400px) {
+        //     width: 260px;
+        //     left: 30px;
+        // }
     }
 }
 

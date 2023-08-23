@@ -12,6 +12,10 @@
 }
 
 .examples-works__item {
+    
+    .examples-works & {
+        height: initial;
+    }
 }
 .examples-works-item {
     display: flex;
@@ -31,6 +35,7 @@
     // align-self: start;
 
     width: 50%;
+    height: 400px;
 
     overflow: hidden;
 
@@ -41,7 +46,7 @@
     }
     
     @media (max-width: $b768) {
-        height: 318px;
+        min-height: 352px;
     }
 
     @media (max-width: $b480) {

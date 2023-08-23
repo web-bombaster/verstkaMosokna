@@ -107,7 +107,7 @@ function initSwiper() {
 					spaceBetween: 16,
 					loop: true,
 				},
-				992: {
+				993: {
 					slidesPerView: 4,
 					spaceBetween: 24,
 					loop: true,
