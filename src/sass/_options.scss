@@ -85,7 +85,7 @@
         color: #fff;
 
         background-color: var(--color-accent);
-        border-radius: var(--brs);
+        border-radius: 8px;
     }
 }
 
@@ -169,7 +169,7 @@
 
 .options-type__current {
     position: relative;
-    padding: 16px 0;
+    padding: 14px 0 16px 0;
 
     display: flex;
     flex-direction: column;

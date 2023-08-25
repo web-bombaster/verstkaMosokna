@@ -16,11 +16,6 @@
   --heroMinCol: calc(100% / 5 - 3 / 4 * var(--mainGap));
   --heroMaxCol: calc((100% - var(--heroMinCol) - 3 / 4 * var(--mainGap)) / 3);
 }
-@media (max-width: 480px) {
-  :root {
-    --brs: 4px;
-  }
-}
 @media (max-width: 768px) {
   :root {
     --mainGap: 16px;
@@ -850,7 +845,7 @@ h3:not([class]) {
   z-index: 1;
   cursor: pointer;
 }
-.buy .swiper__prev, .buy .swiper__next {
+.buy .swiper__prev, .options__box .swiper__prev, .buy .swiper__next, .options__box .swiper__next {
   border: 1px solid var(--color-text);
 }
 .swiper__prev svg, .swiper__next svg {
@@ -860,6 +855,7 @@ h3:not([class]) {
   transform: translate(-50%, -50%);
   width: 16px;
   height: 16px;
+  filter: brightness(0) invert(0);
 }
 @media screen and (max-width: 768px) {
   .swiper__prev, .swiper__next {
@@ -869,6 +865,9 @@ h3:not([class]) {
 .swiper__prev.active, .swiper__next.active {
   color: #fff;
   background-color: var(--color-text);
+}
+.swiper__prev.active svg, .swiper__next.active svg {
+  filter: brightness(0) invert(1);
 }
 
 .swiper__prev {
@@ -3283,7 +3282,7 @@ h3:not([class]) {
 .options-btn__item.toggle {
   color: #fff;
   background-color: var(--color-accent);
-  border-radius: var(--brs);
+  border-radius: 8px;
 }
 
 .options-descr__item {
@@ -3353,7 +3352,7 @@ h3:not([class]) {
 
 .options-type__current {
   position: relative;
-  padding: 16px 0;
+  padding: 14px 0 16px 0;
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -3552,6 +3551,9 @@ h3:not([class]) {
   height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
+.promo-img img {
+  width: 100%;
+}
 
 .promo-hbox {
   display: flex;
@@ -3564,7 +3566,7 @@ h3:not([class]) {
   right: 0;
   padding: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .promo-hbox {
     padding: 16px;
     flex-direction: column;
@@ -3576,12 +3578,11 @@ h3:not([class]) {
 .promo-hbox__title {
   color: #fff;
 }
-
 .promo-hbox__btn {
   margin-top: 0;
   width: 320px;
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .promo-hbox__btn {
     width: 100%;
   }
@@ -3592,8 +3593,9 @@ h3:not([class]) {
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
   justify-content: center;
+  align-items: center;
+  gap: 24px;
   background-color: #fff;
   border-radius: var(--brs-grid);
 }
@@ -3601,6 +3603,7 @@ h3:not([class]) {
   .promo-adv {
     margin: 0 16px 16px 16px;
     padding: 16px;
+    border-radius: 8px;
   }
 }
 
@@ -3628,6 +3631,9 @@ h3:not([class]) {
   .promo-descr {
     padding: 0 16px;
   }
+}
+.promo-descr *:last-child {
+  margin-bottom: 24px;
 }
 
 .grid-product {
@@ -3772,7 +3778,7 @@ h3:not([class]) {
   display: inline-flex;
   padding: 8px 16px;
   color: #fff;
-  border-radius: var(--brs);
+  border-radius: 8px;
   background-color: var(--color-text);
 }
 
@@ -3848,18 +3854,33 @@ h3:not([class]) {
 
 .options-filter {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .options-filter {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
 .options-filter__col1, .options-filter__col2 {
   max-width: 360px;
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .options-filter__col1, .options-filter__col2 {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .options-filter__col1, .options-filter__col2 {
+    max-width: 100%;
+  }
+}
+
+.options-type {
+  display: flex;
+  align-items: center;
 }
 
 .cost__box {
@@ -3872,7 +3893,7 @@ h3:not([class]) {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .cost__box {
     grid-template-columns: 1fr;
   }
@@ -3894,6 +3915,13 @@ h3:not([class]) {
   flex-direction: column;
 }
 
+.cost-item__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .cost-item__descr > *:first-child {
   margin-top: 0;
 }
@@ -3902,6 +3930,10 @@ h3:not([class]) {
 }
 
 .cost-item__btn {
+  margin-top: 0;
+}
+
+.prod-info__price {
   margin-top: auto;
 }
 

@@ -239,7 +239,7 @@ h3:not([class]) {
 	z-index: 1;
 	cursor: pointer;
 
-	.buy & {
+	.buy &, .options__box & {
 		border: 1px solid var(--color-text);
 	}
 
@@ -250,6 +250,8 @@ h3:not([class]) {
 		transform: translate(-50%, -50%);
 		width: 16px;
 		height: 16px;
+
+		filter: brightness(0) invert(0);
 	}
 
 	@media screen and (max-width: $b768) {
@@ -259,6 +261,10 @@ h3:not([class]) {
 	&.active {
 		color: #fff;
 		background-color: var(--color-text);
+
+		svg {
+			filter: brightness(0) invert(1);
+		}
 	}
 }
 

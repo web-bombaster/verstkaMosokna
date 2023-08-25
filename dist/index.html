@@ -178,76 +178,363 @@
       </div>
     </div>
     <main>
-      <div class="hero">
-        <div class="container hero__container">
-          <div class="hero__box">
-            <div class="hero__quiz hero-quiz">
-              <p class="hero-quiz__title h1">Введите адрес вашего дома и узнайте точную стоимость остекления балкона или лоджии</p>
-              <form class="hero-quiz__form">
-                <input class="hero-quiz__input" type="text" placeholder="Братиславская, 8">
-                <button class="btn btn__dark hero-quiz__btn" type="submit">Рассчитать</button>
-              </form>
-            </div><a class="hero__action hero-action" href="#"><img class="hero-action__img" src="img/content/hero-action/hero-action.jpg" srcset="img/content/hero-action/hero-action@2x.jpg 2x" alt="" loading="lazy">
-              <div class="hero-action__info">
-                <div class="hero-action__title h4">Скидки до 30000 рублей в честь нашего юбилея!</div>
-                <div class="hero-action__descr">Закажите остекление до 30 октября и получите персональную скидку.</div>
-                <button class="btn btn__light btn__arrow hero-action__btn" aria-label="Подробнее об акции">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-              </div></a>
+      <div class="promo">
+        <div class="container promo__container">
+          <div class="promo__block promo-block">
+            <div class="promo-block__header promo-header">
+              <picture class="promo-header__img promo-img">
+                <source srcset="img/content/promo/promo-mobile.jpg" media="(max-width: 480px)">
+                <source srcset="img/content/promo/promo-tablet.jpg" media="(max-width: 768px)">
+                <source srcset="img/content/promo/promo-notebook.jpg" media="(max-width: 992px)"><img src="img/content/promo/promo-pc.jpg" alt="Абстрактное изображение">
+              </picture>
+              <div class="promo-header__hbox promo-hbox">
+                <div class="promo-hbox__title h2">Пластиковые окна<br> для загородных домов</div>
+                <button class="promo-hbox__btn btn">Заказать окна</button>
+              </div>
+            </div>
+            <div class="promo-block__adv promo-adv">
+              <div class="promo-adv__item promo-item"><img class="promo-item__icon" src="img/content/promo/01.svg" alt=""><span class="promo-item__title caption-caps">Новостройки<br> на этапе заселения</span></div>
+              <div class="promo-adv__item promo-item"><img class="promo-item__icon" src="img/content/promo/02.svg" alt=""><span class="promo-item__title caption-caps">Вторичная<br> недвижимость</span></div>
+            </div>
+            <div class="promo-block__descr promo-descr p-big">
+              <p>Пластиковые окна – красивое и практичное решение для загородного строительства. Ведь они долговечны, отлично выдерживают перепады температуры и влажности, могут быть самой различной формы, и имеют множество возможностей для декорирования. Мы предлагаем установку окон ПВХ в самые различные типы домов: кирпичные, каркасные, дома из бруса или блоков.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="types-work">
-        <div class="container types-work__container">
-          <h2 class="types-work__title h3">Виды возможного остекления</h2>
-          <div class="types-work__box">
-            <div class="types-work__list js-types-work-list swiper">
-              <div class="types-works__wrapper swiper-wrapper">
-                <div class="types-work__item swiper-slide"><a class="types-work__link" href="#"><img class="types-work__img" src="img/content/types-work/01.jpg" srcset="img/content/types-work/01@2x.jpg 2x" alt="" loading="lazy">
-                    <div class="types-work__info">
-                      <div class="types-work__title h4">От пола до потолка</div>
-                      <div class="types-work__descr caption">
-                        <p>Хорошо подходит для балконов и лоджий без устойчивого основания</p>
-                      </div>
-                      <div class="types-work__price h5">от 4 724 руб/м²</div>
-                    </div></a></div>
-                <div class="types-work__item swiper-slide"><a class="types-work__link" href="#"><img class="types-work__img" src="img/content/types-work/02.jpg" srcset="img/content/types-work/02@2x.jpg 2x" alt="" loading="lazy">
-                    <div class="types-work__info">
-                      <div class="types-work__title h4">Балкон с выносом</div>
-                      <div class="types-work__descr caption">
-                        <p>Хорошо подходит для балконов и лоджий без устойчивого основания</p>
-                      </div>
-                      <div class="types-work__price h5">от 4 724 руб/м²</div>
-                    </div></a></div>
-                <div class="types-work__item swiper-slide"><a class="types-work__link" href="#"><img class="types-work__img" src="img/content/types-work/03.jpg" srcset="img/content/types-work/03@2x.jpg 2x" alt="" loading="lazy">
-                    <div class="types-work__info">
-                      <div class="types-work__title h4">Балкон с крышей</div>
-                      <div class="types-work__descr caption">
-                        <p>Хорошо подходит для балконов и лоджий без устойчивого основания</p>
-                      </div>
-                      <div class="types-work__price h5">от 4 724 руб/м²</div>
-                    </div></a></div>
-                <div class="types-work__item swiper-slide"><a class="types-work__link" href="#"><img class="types-work__img" src="img/content/types-work/04.jpg" srcset="img/content/types-work/04@2x.jpg 2x" alt="" loading="lazy">
-                    <div class="types-work__info">
-                      <div class="types-work__title h4">Балкон на парапет</div>
-                      <div class="types-work__descr caption">
-                        <p>Хорошо подходит для балконов и лоджий без устойчивого основания</p>
-                      </div>
-                      <div class="types-work__price h5">от 4 724 руб/м²</div>
-                    </div></a></div>
+      <div class="cost">
+        <div class="container cost__container">
+          <h2 class="h3 cost__title">Стоимость остекления загородных домов</h2>
+          <div class="cost__wrapper cost-wrapper">
+            <div class="cost__filter options-filter">
+              <div class="options-filter__col1">
+                <div class="options-type">
+                  <div class="options-type__current">
+                    <div class="subtitle caption">Оконная система</div>
+                    <div class="title h5">REHAU Grazio™</div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="options-type__variants">
+                    <div class="variants-item">REHAU Grazio™</div>
+                    <div class="variants-item">222 REHAU Grazio™</div>
+                    <div class="variants-item">333 REHAU Grazio™</div>
+                    <div class="variants-item">444 REHAU Grazio™</div>
+                    <div class="variants-item">555 REHAU Grazio™</div>
+                  </div>
+                </div>
+              </div>
+              <div class="options-filter__col2">
+                <div class="options-type">
+                  <div class="options-type__current">
+                    <div class="subtitle caption">Ламинация</div>
+                    <div class="title h5">Дизайнерская палитра</div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="options-type__variants">
+                    <div class="variants-item">Без ламинации</div>
+                    <div class="variants-item">222 Без ламинации</div>
+                    <div class="variants-item">333 Без ламинации</div>
+                    <div class="variants-item">444 Без ламинации</div>
+                    <div class="variants-item">555 Без ламинации</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cost__box">
+              <div class="cost__item cost-item"><img class="cost-item__img" src="img/content/cost/01.jpg" srcset="img/content/cost/01@2x.jpg 2x" alt="" loading="lazy">
+                <div class="cost-item__inner">
+                  <div class="cost-item__info prod-info">
+                    <div class="prod-info__title h5">Одностворчатое окно</div>
+                    <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                    <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                  </div>
+                  <div class="cost-item__descr">
+                    <p class="caption">Цена «под ключ» 17 345 руб.</p>
+                  </div>
+                  <button class="cost-item__btn btn">Заказать</button>
+                </div>
+              </div>
+              <div class="cost__item cost-item"><img class="cost-item__img" src="img/content/cost/01.jpg" srcset="img/content/cost/01@2x.jpg 2x" alt="" loading="lazy">
+                <div class="cost-item__inner">
+                  <div class="cost-item__info prod-info">
+                    <div class="prod-info__title h5">Одностворчатое окно</div>
+                    <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                    <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                  </div>
+                  <div class="cost-item__descr">
+                    <p class="caption">Цена «под ключ» 17 345 руб.</p>
+                  </div>
+                  <button class="cost-item__btn btn">Заказать</button>
+                </div>
+              </div>
+              <div class="cost__item cost-item"><img class="cost-item__img" src="img/content/cost/01.jpg" srcset="img/content/cost/01@2x.jpg 2x" alt="" loading="lazy">
+                <div class="cost-item__inner">
+                  <div class="cost-item__info prod-info">
+                    <div class="prod-info__title h5">Одностворчатое окно</div>
+                    <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                    <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                  </div>
+                  <div class="cost-item__descr">
+                    <p class="caption">Цена «под ключ» 17 345 руб.</p>
+                  </div>
+                  <button class="cost-item__btn btn">Заказать</button>
+                </div>
+              </div>
+              <div class="cost__item cost-item"><img class="cost-item__img" src="img/content/cost/01.jpg" srcset="img/content/cost/01@2x.jpg 2x" alt="" loading="lazy">
+                <div class="cost-item__inner">
+                  <div class="cost-item__info prod-info">
+                    <div class="prod-info__title h5">Одностворчатое окно</div>
+                    <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                    <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                  </div>
+                  <div class="cost-item__descr">
+                    <p class="caption">Цена «под ключ» 17 345 руб.</p>
+                  </div>
+                  <button class="cost-item__btn btn">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="types-work__btn-box">
-            <div class="slider-btn types-work__prev swiper__prev">
+          <div class="cost__text">
+            <p class="p"> <b>Цена под ключ включает: <br></b>Стоимость изделия в&nbsp;выбранной оконной системе, подоконники&nbsp;&mdash; 250&nbsp;мм, отлив&nbsp;&mdash; 150&nbsp;мм, подставочный профиль, базовый монтаж с&nbsp;изоляцией наружнего шва, откосы до&nbsp;250&nbsp;мм, подготовка проема к&nbsp;монтажу откосов, монтаж откосов.</p>
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <div class="container options__container">
+          <h2 class="h3 options__title">Сравните оконные системы</h2>
+          <div class="options__box">
+            <div class="options__tabs options-tabs">
+              <div class="options-tabs__btn options-btn"><span class="options-btn__item h6">Бюджетные окна</span><span class="options-btn__item h6">Для комфортной жизни</span><span class="options-btn__item h6">Окна премиум класса</span></div>
+              <div class="options-tabs__descr options-descr">
+                <div class="options-descr__item">
+                  <div class="compare-products compare-products-js swiper">
+                    <div class="compare-products__list swiper-wrapper">
+                      <div class="compare-products__item comp-prod swiper-slide">
+                        <div class="comp-prod__img"><img src="img/content/compare-products/01.jpg" alt="" loading="lazy" srcset="img/content/compare-products/01@2x.jpg 2x"></div>
+                        <div class="comp-prod__info prod-info">
+                          <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                          <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                          <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                        </div>
+                        <div class="comp-prod__table zebra">
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Камерность профиля</div>
+                            <div class="zebra__td p">5 камер</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Монтажная глубина профиля</div>
+                            <div class="zebra__td p">60 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Высота непрозрачной части</div>
+                            <div class="zebra__td p">109 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Ширина стеклопакета</div>
+                            <div class="zebra__td p">40 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент теплозащиты</div>
+                            <div class="zebra__td p">0,83м²·°С/Вт</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент звукоизоляции</div>
+                            <div class="zebra__td p">≈40 Rw(дБ)</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="compare-products__item comp-prod swiper-slide">
+                        <div class="comp-prod__img"><img src="img/content/compare-products/01.jpg" alt="" loading="lazy" srcset="img/content/compare-products/01@2x.jpg 2x"></div>
+                        <div class="comp-prod__info prod-info">
+                          <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                          <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                          <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                        </div>
+                        <div class="comp-prod__table zebra">
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Камерность профиля</div>
+                            <div class="zebra__td p">5 камер</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Монтажная глубина профиля</div>
+                            <div class="zebra__td p">60 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Высота непрозрачной части</div>
+                            <div class="zebra__td p">109 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Ширина стеклопакета</div>
+                            <div class="zebra__td p">40 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент теплозащиты</div>
+                            <div class="zebra__td p">0,83м²·°С/Вт</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент звукоизоляции</div>
+                            <div class="zebra__td p">≈40 Rw(дБ)</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="compare-products__item comp-prod swiper-slide">
+                        <div class="comp-prod__img"><img src="img/content/compare-products/01.jpg" alt="" loading="lazy" srcset="img/content/compare-products/01@2x.jpg 2x"></div>
+                        <div class="comp-prod__info prod-info">
+                          <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                          <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                          <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                        </div>
+                        <div class="comp-prod__table zebra">
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Камерность профиля</div>
+                            <div class="zebra__td p">5 камер</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Монтажная глубина профиля</div>
+                            <div class="zebra__td p">60 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Высота непрозрачной части</div>
+                            <div class="zebra__td p">109 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Ширина стеклопакета</div>
+                            <div class="zebra__td p">40 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент теплозащиты</div>
+                            <div class="zebra__td p">0,83м²·°С/Вт</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент звукоизоляции</div>
+                            <div class="zebra__td p">≈40 Rw(дБ)</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="compare-products__item comp-prod swiper-slide">
+                        <div class="comp-prod__img"><img src="img/content/compare-products/01.jpg" alt="" loading="lazy" srcset="img/content/compare-products/01@2x.jpg 2x"></div>
+                        <div class="comp-prod__info prod-info">
+                          <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                          <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                          <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                        </div>
+                        <div class="comp-prod__table zebra">
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Камерность профиля</div>
+                            <div class="zebra__td p">5 камер</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Монтажная глубина профиля</div>
+                            <div class="zebra__td p">60 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Высота непрозрачной части</div>
+                            <div class="zebra__td p">109 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Ширина стеклопакета</div>
+                            <div class="zebra__td p">40 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент теплозащиты</div>
+                            <div class="zebra__td p">0,83м²·°С/Вт</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент звукоизоляции</div>
+                            <div class="zebra__td p">≈40 Rw(дБ)</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="compare-products__item comp-prod swiper-slide">
+                        <div class="comp-prod__img"><img src="img/content/compare-products/01.jpg" alt="" srcset="img/content/compare-products/01@2x.jpg 2x"></div>
+                        <div class="comp-prod__info prod-info">
+                          <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                          <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                          <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                        </div>
+                        <div class="comp-prod__table zebra">
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Камерность профиля</div>
+                            <div class="zebra__td p">5 камер</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Монтажная глубина профиля</div>
+                            <div class="zebra__td p">60 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Высота непрозрачной части</div>
+                            <div class="zebra__td p">109 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Ширина стеклопакета</div>
+                            <div class="zebra__td p">40 мм</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент теплозащиты</div>
+                            <div class="zebra__td p">0,83м²·°С/Вт</div>
+                          </div>
+                          <div class="zebra__tr">
+                            <div class="zebra__td p">Коэффициент звукоизоляции</div>
+                            <div class="zebra__td p">≈40 Rw(дБ)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-btn compare-products__prev swiper__prev">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#slider-right"></use>
+                      </svg>
+                    </div>
+                    <div class="slider-btn compare-products__next swiper__next active">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#slider-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="options-descr__item">
+                  <p>Контент второй вкладки</p>
+                </div>
+                <div class="options-descr__item">
+                  <p>Контент третьей вкладки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="types-windows">
+        <div class="container types-windows__container">
+          <h2 class="h3 types-windows__title">Окна нестандартной формы</h2>
+          <div class="types-windows__list swiper js-types-windows-list">
+            <div class="types__wrapper swiper-wrapper"><a class="types-windows__item types-windows-item swiper-slide" href="#">
+                <div class="types-windows-item__img"><img src="img/content/types-windows/01.jpg" srcset="img/content/types-windows/01@2x.jpg 2x"></div>
+                <div class="types-windows-item__box">
+                  <div class="types-windows-item__title h4">Арочные окна</div>
+                  <div class="types-windows-item__descr p">Хорошо подходит для балконов и лоджий без устойчивого основания</div>
+                </div></a><a class="types-windows__item types-windows-item swiper-slide" href="#">
+                <div class="types-windows-item__img"><img src="img/content/types-windows/02.jpg" srcset="img/content/types-windows/02@2x.jpg 2x"></div>
+                <div class="types-windows-item__box">
+                  <div class="types-windows-item__title h4">Треугольные окна</div>
+                  <div class="types-windows-item__descr p">Хорошо подходит для балконов и лоджий без устойчивого основания</div>
+                </div></a><a class="types-windows__item types-windows-item swiper-slide" href="#">
+                <div class="types-windows-item__img"><img src="img/content/types-windows/03.jpg" srcset="img/content/types-windows/03@2x.jpg 2x"></div>
+                <div class="types-windows-item__box">
+                  <div class="types-windows-item__title h4">Круглые окна</div>
+                  <div class="types-windows-item__descr p">Хорошо подходит для балконов и лоджий без устойчивого основания</div>
+                </div></a><a class="types-windows__item types-windows-item swiper-slide" href="#">
+                <div class="types-windows-item__img"><img src="img/content/types-windows/04.jpg" srcset="img/content/types-windows/04@2x.jpg 2x"></div>
+                <div class="types-windows-item__box">
+                  <div class="types-windows-item__title h4">Окна сложной формы</div>
+                  <div class="types-windows-item__descr p">Хорошо подходит для балконов и лоджий без устойчивого основания</div>
+                </div></a></div>
+            <div class="slider-btn types-windows__prev swiper__prev">
               <svg>
                 <use xlink:href="img/sprite.svg#slider-right"></use>
               </svg>
             </div>
-            <div class="slider-btn types-work__next swiper__next active">
+            <div class="slider-btn types-windows__next swiper__next active">
               <svg>
                 <use xlink:href="img/sprite.svg#slider-right"></use>
               </svg>
@@ -255,73 +542,52 @@
           </div>
         </div>
       </div>
-      <div class="prices-work">
-        <div class="container prices-work__container">
-          <h2 class="h3">Цены на остекление балконов и лоджий</h2>
-          <div class="prices-work__box">
-            <div class="prices-work__item">
-              <div class="prices-work__title h4">Лоджия</div>
-              <div class="prices-work__inner">
-                <div class="prices-work__img"><img src="img/content/prices-work/01.jpg" srcset="img/content/prices-work/01@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Раздвижное алюминиевое остекление</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Остекление окнами REHAU Blitz</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-              </div><a class="prices-work__btn btn" href="#">Заказать</a>
+      <div class="services">
+        <div class="container services__container">
+          <div class="services__list swiper js-services-list">
+            <div class="services__wrapper swiper-wrapper"><a class="services__item services-item swiper-slide" href=""><img class="services-item__img" src="img/content/services/01.jpg" srcset="img/content/services/01@2x.jpg 2x" alt="" loading="lazy">
+                <div class="services-item__info">
+                  <div class="services-item__title h4">Декорирование и аксессуары</div>
+                  <div class="services-item__descr p"> 
+                    <p>Узнайте в чём различия в монтаже в разных типах загородных домов.</p>
+                  </div>
+                  <button class="btn btn__light btn__arrow services-item__btn" aria-label="Подробнее">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div></a><a class="services__item services-item swiper-slide" href=""><img class="services-item__img" src="img/content/services/02.jpg" srcset="img/content/services/02@2x.jpg 2x" alt="" loading="lazy">
+                <div class="services-item__info">
+                  <div class="services-item__title h4">Декорирование и аксессуары</div>
+                  <div class="services-item__descr p"> 
+                    <p>Закажите остекление до 30 октября и получите персональную скидку.</p>
+                  </div>
+                  <button class="btn btn__light btn__arrow services-item__btn" aria-label="Подробнее">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div></a><a class="services__item services-item swiper-slide" href=""><img class="services-item__img" src="img/content/services/03.jpg" srcset="img/content/services/03@2x.jpg 2x" alt="" loading="lazy">
+                <div class="services-item__info">
+                  <div class="services-item__title h4">Декорирование и аксессуары</div>
+                  <div class="services-item__descr p"> 
+                    <p>Узнайте больше о правильной технологии по отделки откосов которую используют наши бригады монтажа.</p>
+                  </div>
+                  <button class="btn btn__light btn__arrow services-item__btn" aria-label="Подробнее">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div></a></div>
+            <div class="slider-btn services-list__prev swiper__prev">
+              <svg>
+                <use xlink:href="img/sprite.svg#slider-right"></use>
+              </svg>
             </div>
-            <div class="prices-work__item">
-              <div class="prices-work__title h4">П-образный балкон</div>
-              <div class="prices-work__inner">
-                <div class="prices-work__img"><img src="img/content/prices-work/01.jpg" srcset="img/content/prices-work/01@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Раздвижное алюминиевое остекление</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Остекление окнами REHAU Blitz</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-              </div><a class="prices-work__btn btn" href="#">Заказать</a>
-            </div>
-            <div class="prices-work__item">
-              <div class="prices-work__title h4">Балкон типа «Каблук»</div>
-              <div class="prices-work__inner">
-                <div class="prices-work__img"><img src="img/content/prices-work/01.jpg" srcset="img/content/prices-work/01@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Раздвижное алюминиевое остекление</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Остекление окнами REHAU Blitz</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-              </div><a class="prices-work__btn btn" href="#">Заказать</a>
-            </div>
-            <div class="prices-work__item">
-              <div class="prices-work__title h4">Угловой балкон</div>
-              <div class="prices-work__inner">
-                <div class="prices-work__img"><img src="img/content/prices-work/01.jpg" srcset="img/content/prices-work/01@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Раздвижное алюминиевое остекление</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-                <div class="prices-work__info">
-                  <div class="prices-work__subtitle h5">Холодное остекление</div>
-                  <div class="prices-work__descr caption">Остекление окнами REHAU Blitz</div>
-                  <div class="prices-work__price h5">от 8 247 руб/м²</div>
-                </div>
-              </div><a class="prices-work__btn btn" href="#">Заказать</a>
+            <div class="slider-btn services-list__next swiper__next active">
+              <svg>
+                <use xlink:href="img/sprite.svg#slider-right"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -331,7 +597,7 @@
           <h2 class="h3 options__title">Дополнительные опции для окон</h2>
           <div class="options__box">
             <div class="options__tabs options-tabs">
-              <div class="options-tabs__btn options-btn"><span class="options-btn__item h6">Отделка стен</span><span class="options-btn__item h6">Отделка пола</span><span class="options-btn__item h6">Отделка потолка</span><span class="options-btn__item h6">Мебель</span><span class="options-btn__item h6">Другое</span></div>
+              <div class="options-tabs__btn options-btn"><span class="options-btn__item h6">Подоконники</span><span class="options-btn__item h6">Цветные окна</span><span class="options-btn__item h6">Ручки</span><span class="options-btn__item h6">Москитная сетка</span><span class="options-btn__item h6">Защита от солнца</span></div>
               <div class="options-tabs__descr options-descr">
                 <div class="options-descr__item">
                   <p class="p-big">Элегантная и современная коллекция декоров позволит посмотреть свежим взглядом на оформление окна и открыть новые возможности в дизайне Вашей комнаты. Поверхность подоконников устойчива к воздействию кислотосодержащих и химических чистящих средств, не выцветает под воздействием УФ лучей.</p>
@@ -344,7 +610,7 @@
                           <div class="icon"></div>
                         </div>
                         <div class="options-type__variants">
-                          <div class="variants-item">Дизайнерская палитра</div>
+                          <div class="variants-item toggle">Дизайнерская палитра</div>
                           <div class="variants-item">222 Дизайнерская палитра</div>
                           <div class="variants-item">333 Дизайнерская палитра</div>
                           <div class="variants-item">444 Дизайнерская палитра</div>
@@ -377,231 +643,231 @@
                     <div class="right">
                       <div class="right-tabs">
                         <div class="right-tabs__item">
-                          <div class="options__img-box" style="background-image: url('img/content/options/04.jpg');">
+                          <div class="options__img-box" style="background-image: url('img/content/options/01.jpg');">
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="right-tabs__item">
-                          <div class="options__img-box" style="background-image: url('img/content/options/04.jpg');">
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                           </div>
                         </div>
                         <div class="right-tabs__item">
-                          <div class="options__img-box" style="background-image: url('img/content/options/04.jpg');">
+                          <div class="options__img-box" style="background-image: url('img/content/options/01.jpg');">
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                            <div class="options__img option-img option-img__item toggle">
+                              <picture>
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="right-tabs__item">
-                          <div class="options__img-box" style="background-image: url('img/content/options/04.jpg');">
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
-                              </picture>
-                            </div>
-                            <div class="options__img option-img option-img__item">
-                              <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                           </div>
                         </div>
                         <div class="right-tabs__item">
-                          <div class="options__img-box" style="background-image: url('img/content/options/04.jpg');">
+                          <div class="options__img-box" style="background-image: url('img/content/options/01.jpg');">
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/04.jpg, img/content/options/04@2x.jpg 2x"><img src="img/content/options/04.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/05.jpg, img/content/options/05@2x.jpg 2x"><img src="img/content/options/05.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                            <div class="options__img option-img option-img__item toggle">
+                              <picture>
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right-tabs__item">
+                          <div class="options__img-box" style="background-image: url('img/content/options/01.jpg');">
+                            <div class="options__img option-img option-img__item toggle">
+                              <picture>
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                             <div class="options__img option-img option-img__item">
                               <picture>
-                                <source srcset="img/content/options/06.jpg, img/content/options/06@2x.jpg 2x"><img src="img/content/options/06.jpg" alt="" loading="lazy">
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                            <div class="options__img option-img option-img__item">
+                              <picture>
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right-tabs__item">
+                          <div class="options__img-box" style="background-image: url('img/content/options/01.jpg');">
+                            <div class="options__img option-img option-img__item">
+                              <picture>
+                                <source srcset="img/content/options/01.jpg, img/content/options/01@2x.jpg 2x"><img src="img/content/options/01.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                            <div class="options__img option-img option-img__item toggle">
+                              <picture>
+                                <source srcset="img/content/options/02.jpg, img/content/options/02@2x.jpg 2x"><img src="img/content/options/02.jpg" alt="" loading="lazy">
+                              </picture>
+                            </div>
+                            <div class="options__img option-img option-img__item">
+                              <picture>
+                                <source srcset="img/content/options/03.jpg, img/content/options/03@2x.jpg 2x"><img src="img/content/options/03.jpg" alt="" loading="lazy">
                               </picture>
                             </div>
                           </div>
@@ -611,7 +877,7 @@
                   </div>
                 </div>
                 <div class="options-descr__item">
-                  <p>Контент второй вкладки</p>
+                  <p>Контент первой вкладки</p>
                 </div>
                 <div class="options-descr__item">
                   <p>Контент третьей вкладки</p>
@@ -627,108 +893,147 @@
           </div>
         </div>
       </div>
-      <div class="examples-works">
-        <div class="container examples-works__container">
-          <h2 class="h3">Примеры работ с профилем REHAU Blitz™</h2>
-          <div class="examples-works__list swiper js-examples-works-list">
-            <div class="examples-works__wrapper swiper-wrapper">
-              <div class="examples-works__item examples-works-item swiper-slide">
-                <div class="examples-works-item__img"><img src="img/content/examples-works-balkony/01.jpg" srcset="img/content/examples-works-balkony/01@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="examples-works-item__info mc">
-                  <div class="examples-works-item__title h4">Остекление балкона 2м с отделкой</div>
-                  <div class="examples-works-item__descr">
-                    <p>Ламинация окон давно перестала быть роскошью. Цветные фасады домов, увеличение количества загородного строительства, да и просто желание украсить свой дом приводит к тому, что спрос на красивые ламинированные окна неуклонно растет с каждым годом.</p>
-                  </div>
-                  <div class="examples-works-item__type h6">Стоимость остекления<span class="caption">«Под ключ»</span></div>
-                  <div class="examples-works-item__price h5">от 4 581 руб/м²</div>
-                </div>
-              </div>
-              <div class="examples-works__item examples-works-item swiper-slide">
-                <div class="examples-works-item__img"><img src="img/content/examples-works-balkony/02.jpg" srcset="img/content/examples-works-balkony/02@2x.jpg 2x" alt="" loading="lazy"></div>
-                <div class="examples-works-item__info mc">
-                  <div class="examples-works-item__title h4">Остекление балкона 2м с отделкой</div>
-                  <div class="examples-works-item__descr p">
-                    <p>Ламинация окон давно перестала быть роскошью. Цветные фасады домов, увеличение количества загородного строительства, да и просто желание украсить свой дом приводит к тому, что спрос на красивые ламинированные окна неуклонно растет с каждым годом.</p>
-                  </div>
-                  <div class="examples-works-item__type h6">Стоимость остекления<span class="caption">«Под ключ»</span></div>
-                  <div class="examples-works-item__price h5">от 4 581 руб/м²</div>
-                </div>
+      <div class="promo">
+        <div class="container promo__container">
+          <div class="promo__block promo-block">
+            <div class="promo-block__header promo-header">
+              <picture class="promo-header__img promo-img">
+                <source srcset="img/content/promo/promo-mobile.jpg" media="(max-width: 480px)">
+                <source srcset="img/content/promo/promo-tablet.jpg" media="(max-width: 768px)">
+                <source srcset="img/content/promo/promo-notebook.jpg" media="(max-width: 992px)"><img src="img/content/promo/promo-pc.jpg" alt="Абстрактное изображение">
+              </picture>
+              <div class="promo-header__hbox promo-hbox">
+                <div class="promo-hbox__title h2">Входные группы<br> для загородных домов</div>
+                <button class="promo-hbox__btn btn">Заказать окна</button>
               </div>
             </div>
-          </div>
-          <div class="examples-works__box">
-            <div class="slider-btn examples-works-list__prev swiper__prev">
-              <svg>
-                <use xlink:href="img/sprite.svg#slider-right"></use>
-              </svg>
+            <div class="promo-block__adv promo-adv">
+              <div class="promo-adv__item promo-item"><img class="promo-item__icon" src="img/content/promo/01.svg" alt=""><span class="promo-item__title caption-caps">Новостройки<br> на этапе заселения</span></div>
+              <div class="promo-adv__item promo-item"><img class="promo-item__icon" src="img/content/promo/02.svg" alt=""><span class="promo-item__title caption-caps">Вторичная<br> недвижимость</span></div>
             </div>
-            <div class="slider-btn examples-works-list__next swiper__next active">
-              <svg>
-                <use xlink:href="img/sprite.svg#slider-right"></use>
-              </svg>
+            <div class="promo-block__descr promo-descr p-big">
+              <p>Пластиковые окна – красивое и практичное решение для загородного строительства. Ведь они долговечны, отлично выдерживают перепады температуры и влажности, могут быть самой различной формы, и имеют множество возможностей для декорирования. Мы предлагаем установку окон ПВХ в самые различные типы домов: кирпичные, каркасные, дома из бруса или блоков.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="buy">
-        <div class="container buy__container">
-          <div class="buy__box">
-            <div class="buy__top buy-top">
-              <div class="buy-top__info">
-                <h1 class="buy-top__title h3">Остекление балконов и лоджий</h1>
-                <div class="buy-top__descr">
-                  <p>Компания «Московские окна» осуществляет комплекс работ по остеклению балконов современным надежным профилем ПВХ или алюминиевым профилем. Обращаясь к нам, вы избавляете себя от всех возможных хлопот, получая полностью готовый результат.</p>
-                  <p>Попробуйте сравнить, где и сколько стоит остекление балконов и лоджий, цена в Москве в равных компаниях может существенно различаться. И чтобы избежать всевозможных наценок, сотрудничать стоит напрямую с производителем. </p>
+      <div class="grid-product">
+        <div class="container grid-product__container">
+          <div class="grid-product__box">
+            <div class="grid-product__item gp-item">
+              <div class="gp-item__img"><img src="img/content/grid-product/01.jpg" alt="" loading="lazy" srcset="img/content/grid-product/01@2x.jpg 2x"></div>
+              <div class="gp-item__box">
+                <div class="gp-item__header prod-info">
+                  <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                  <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                  <div class="prod-info__price h5">от 8 247 руб/м²</div>
                 </div>
-              </div>
-              <div class="js-bubbles-list swiper">
-                <ul class="buy-top__bubbles bubbles swiper-wrapper">
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Изготовление изделий на собственном автоматизированном производстве</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Выгодные цены от производителя</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Качественная европейская фурнитура</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">«Зимнее» и «Летнее» остекление по современным технологиям</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Москитные сетки</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Противовзломные механизмы</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Декоративная отделка</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Механизмы защиты для детей и животных</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Отделка с утеплением балконов и лоджий</a></li>
-                  <li class="bubbles__item swiper-slide"><a class="bubbles__link" href="#">Профессиональная установка с гарантией 5 лет</a></li>
-                </ul>
-              </div>
-              <div class="bubbles__btn-box">
-                <div class="slider-btn bubbles-list__prev swiper__prev">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#slider-right"></use>
-                  </svg>
+                <div class="gp-item__table zebra">
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Камерность</div>
+                    <div class="zebra__td p">5 камер</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Коэффиц. теплозащиты</div>
+                    <div class="zebra__td p">0,83м²·°С/Вт</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Толщина</div>
+                    <div class="zebra__td p">40 мм</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Уплотнение </div>
+                    <div class="zebra__td p">Чёрное каучуковое</div>
+                  </div>
                 </div>
-                <div class="slider-btn bubbles-list__next swiper__next active">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#slider-right"></use>
-                  </svg>
-                </div>
+                <button class="gp-item__btn btn">Заказать</button>
               </div>
             </div>
-            <div class="buy__bottom buy-bottom">
-              <div class="buy-bottom__col-1 buy-col">
-                <div class="buy-bottom__title h4">Купите готовые окна прямо со склада</div><img class="buy-bottom__img" src="img/content/buy/01.png" srcset="img/content/buy/01@2x.png 2x" alt="" loading="lazy">
-                <div class="buy-bottom__btn-box"><a class="buy-bottom__btn btn" href="#">Купить окна</a></div>
-              </div>
-              <div class="buy-bottom__col-2 buy-col">
-                <div class="buy-bottom__title h4">Купите готовые окна прямо со склада</div><img class="buy-bottom__img" src="img/content/buy/02.png" srcset="img/content/buy/02@2x.png 2x" alt="" loading="lazy">
-                <div class="buy-bottom__btn-box"><a class="buy-bottom__btn btn" href="#">Купить окна</a></div>
-              </div>
-              <div class="buy-bottom__col-3 buy-col">
-                <h3 class="buy-bottom__title h4">Как выбрать пластиковые окна?</h3>
-                <div class="buy-bottom__descr">
-                  <p>Затрудняетесь с выбором? Хотите получить самое выгодное предложение? Звоните или оставьте свой телефон, мы свяжемся с вами. Пригласите менеджера для консультации на дому и точного замера. Наши специалисты сделают профессиональный расчет выбранного вами окна.</p>
+            <div class="grid-product__item gp-item">
+              <div class="gp-item__img"><img src="img/content/grid-product/02.jpg" alt="" loading="lazy" srcset="img/content/grid-product/02@2x.jpg 2x"></div>
+              <div class="gp-item__box">
+                <div class="gp-item__header prod-info">
+                  <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                  <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                  <div class="prod-info__price h5">от 8 247 руб/м²</div>
                 </div>
-                <div class="buy-bottom__btn-box"><a class="buy-bottom__btn btn btn__light" href="#">
-                    <svg class="main-menu__item-icon">
-                      <use xlink:href="img/sprite.svg#telephone"></use>
-                    </svg><span>Бесплатный звонок</span></a><a class="buy-bottom__btn btn btn__light" href="#">
-                    <svg class="main-menu__item-icon">
-                      <use xlink:href="img/sprite.svg#whatsapp"></use>
-                    </svg><span>Написать в WhatsApp</span></a></div>
+                <div class="gp-item__table zebra">
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Камерность</div>
+                    <div class="zebra__td p">5 камер</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Коэффиц. теплозащиты</div>
+                    <div class="zebra__td p">0,83м²·°С/Вт</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Толщина</div>
+                    <div class="zebra__td p">40 мм</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Уплотнение</div>
+                    <div class="zebra__td p">Чёрное каучуковое</div>
+                  </div>
+                </div>
+                <button class="gp-item__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="grid-product__item gp-item">
+              <div class="gp-item__img"><img src="img/content/grid-product/01.jpg" alt="" loading="lazy" srcset="img/content/grid-product/01@2x.jpg 2x"></div>
+              <div class="gp-item__box">
+                <div class="gp-item__header prod-info">
+                  <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                  <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                  <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                </div>
+                <div class="gp-item__table zebra">
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Камерность</div>
+                    <div class="zebra__td p">5 камер</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Коэффиц. теплозащиты</div>
+                    <div class="zebra__td p">0,83м²·°С/Вт</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Толщина</div>
+                    <div class="zebra__td p">40 мм</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Уплотнение</div>
+                    <div class="zebra__td p">Чёрное каучуковое</div>
+                  </div>
+                </div>
+                <button class="gp-item__btn btn">Заказать</button>
+              </div>
+            </div>
+            <div class="grid-product__item gp-item">
+              <div class="gp-item__img"><img src="img/content/grid-product/02.jpg" alt="" loading="lazy" srcset="img/content/grid-product/02@2x.jpg 2x"></div>
+              <div class="gp-item__box">
+                <div class="gp-item__header prod-info">
+                  <div class="prod-info__title h5">REHAU Grazio-Design™</div>
+                  <div class="prod-info__descr caption">Раздвижное алюминиевое остекление</div>
+                  <div class="prod-info__price h5">от 8 247 руб/м²</div>
+                </div>
+                <div class="gp-item__table zebra">
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Камерность</div>
+                    <div class="zebra__td p">5 камер</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Коэффиц. теплозащиты</div>
+                    <div class="zebra__td p">0,83м²·°С/Вт</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Толщина</div>
+                    <div class="zebra__td p">40 мм</div>
+                  </div>
+                  <div class="zebra__tr">
+                    <div class="zebra__td p">Уплотнение</div>
+                    <div class="zebra__td p">Чёрное каучуковое</div>
+                  </div>
+                </div>
+                <button class="gp-item__btn btn">Заказать</button>
               </div>
             </div>
           </div>
