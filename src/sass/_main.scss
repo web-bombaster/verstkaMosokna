@@ -140,6 +140,19 @@ main {
 .content {
 	margin-top: 5rem;
 	margin-bottom: 5rem;
+
+	p {
+		@include p-big;
+	}
+
+	h2 {
+		@include h3;
+	}
+}
+
+.content__container {
+	margin: 0 auto;
+	max-width: 928px;
 }
 
 .section-header {

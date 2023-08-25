@@ -11,3 +11,25 @@
 		}
 	}
 }
+
+@mixin p-big {
+	font-size: 20px;
+	line-height: 1.3;
+	
+	@media (max-width: $b480) {
+		font-size: 16px;
+		line-height: 1.125;
+	}
+}
+
+@mixin h3 {
+	font-family: 'Calibri';
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.08;
+
+	@media (max-width: $b480) {
+		font-size: 20px;
+		line-height: 1.1;
+	}
+}

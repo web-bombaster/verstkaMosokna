@@ -10,8 +10,12 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'shablonnaya';
 
+
+//- shablonnaya - Шаблонная страница
+if pageType === 'shablonnaya'
+	include shablonnaya
 
 //- osteklenie - Стоимость остекления загородных домов
 if pageType === 'osteklenie'
