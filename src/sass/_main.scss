@@ -152,7 +152,15 @@ main {
 
 .content__container {
 	margin: 0 auto;
-	max-width: 928px;
+	max-width: calc(928px + 2 * 3.2rem);
+}
+
+.content__block {
+	margin-bottom: 60px;
+
+	@media screen and (max-width: $b480) {
+		margin-bottom: 32px;
+	}
 }
 
 .section-header {
