@@ -10,14 +10,14 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'index';
+- var pageType = 'home';
 
 
 //- shablonnaya - Шаблонная страница
 if pageType === 'shablonnaya'
 	include shablonnaya
 
-//- osteklenie - Стоимость остекления загородных домов
+//- osteklenie - Загородные дома
 if pageType === 'osteklenie'
 	include osteklenie
 
@@ -25,13 +25,13 @@ if pageType === 'osteklenie'
 if pageType === 'balkony'
 	include balkony
 
-//- home - главная страница - Пластиковые окна
-if pageType === 'home'
-	include home
-
 //- window-system - Оконная система
 if pageType === 'window-system'
 	include window-system
+
+//- home - главная страница - Пластиковые окна
+if pageType === 'home'
+	include home
 
 //- index - для показа верстки
 if pageType === 'index'
