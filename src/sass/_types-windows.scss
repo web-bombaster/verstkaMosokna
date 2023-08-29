@@ -18,6 +18,10 @@
     overflow: hidden;
 
     background-color: var(--color-gray-01);
+
+    .types-windows & {
+        height: auto;
+    }
 }
 .types-windows-item {
 }

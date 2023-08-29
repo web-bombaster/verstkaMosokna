@@ -1,5 +1,9 @@
 .compare-products {
 }
+.compare-products__box {
+    overflow: hidden;
+    border-radius: var(--brs-grid);
+}
 .compare-products__list {
 }
 .compare-products__item {

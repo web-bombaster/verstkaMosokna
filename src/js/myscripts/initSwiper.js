@@ -19,6 +19,10 @@ function initSwiper() {
 					loop: true,
 				},
 				992: {
+					slidesPerView: 3.3,
+					loop: true,
+				},
+				1200: {
 					slidesPerView: 4,
 					loop: true,
 				},
