@@ -2958,6 +2958,18 @@ h3:not([class]) {
   margin-bottom: var(--indentBlocks);
 }
 
+.types-windows__box {
+  border-radius: var(--brs-grid);
+  overflow: hidden;
+}
+
+.types-windows__list {
+  margin-bottom: 0;
+}
+.types-windows__list.swiper {
+  padding-bottom: 0;
+}
+
 .types-windows__item {
   border-radius: var(--brs-grid);
   overflow: hidden;
@@ -2973,6 +2985,11 @@ h3:not([class]) {
 
 .types-windows-item__title {
   margin-bottom: 4px;
+}
+
+.types-windows__btn-box {
+  position: relative;
+  padding-bottom: 56px;
 }
 
 .property {

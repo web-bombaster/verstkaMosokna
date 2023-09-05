@@ -7,7 +7,16 @@
 
 .types-windows__title {
 }
+.types-windows__box {
+    border-radius: var(--brs-grid);
+    overflow: hidden;
+}
+
 .types-windows__list {
+    margin-bottom: 0;
+    &.swiper {
+        padding-bottom: 0;
+    }
 }
 
 .types__wrapper {
@@ -41,4 +50,9 @@
 }
 
 .types-windows__next {
+}
+
+.types-windows__btn-box {
+	position: relative;
+    padding-bottom: 56px;
 }
