@@ -3,6 +3,14 @@
 .compare-products__box {
     overflow: hidden;
     border-radius: var(--brs-grid);
+
+    .swiper__next, .swiper__prev {
+        display: block;
+    }
+
+    .swiper {
+        padding-bottom: 56px;
+    }
 }
 .compare-products__list {
 }

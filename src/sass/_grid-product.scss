@@ -10,9 +10,9 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 24px;
 
-	@media (max-width: 1400px) {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+	// @media (max-width: 1400px) {
+	// 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	// }
 
 	@media (max-width: 1100px) {
 		grid-template-columns: 1fr 1fr;
@@ -41,7 +41,8 @@
         }
 	}
 
-	@media (max-width: 1400px) {
+	// @media (max-width: 1400px) {
+	@media (max-width: 992px) {
 		flex-direction: column;
 
 		&:nth-child(4n),
@@ -67,25 +68,26 @@
 .gp-item__img {
 	position: relative;
 	width: 52%;
+	height: 100%;
 	overflow: hidden;
 
 	@media (max-width: 1400px) {
-		height: 340px;
+		// height: 340px;
 		width: 100%;
+	}
+
+	@media (max-width: 992px) {
+		height: 240px;
 	}
 
 	@media (max-width: $b768) {
-		width: 52%;
-		height: auto;
+		width: 50%;
+		height: 100%;
 	}
 
     @media (max-width: 600px) {
-		height: 340px;
 		width: 100%;
-    }
-
-    @media (max-width: 480px) {
-        height: 240px;
+		height: 240px;
     }
 
 	& img {
@@ -94,12 +96,13 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
-		height: auto;
+		height: 100%;
+		object-fit: cover;
 		max-width: initial;
 
 		@media (max-width: 1400px) {
 			width: 100%;
-			height: auto;
+			// height: auto;
 		}
 
 		@media (max-width: $b768) {
@@ -179,6 +182,14 @@
 	}
 
 	@media (max-width: $b480) {
+		margin-top: 16px;
+	}
+
+	@media screen and (max-width: $b768) {
+		margin-top: 25px;
+	}
+
+	@media screen and (max-width: 600px) {
 		margin-top: 16px;
 	}
 }
