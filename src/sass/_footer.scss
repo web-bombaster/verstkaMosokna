@@ -162,6 +162,12 @@
     color: #fff;
     line-height: 1.125;
 
+    transition: transform .25s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
     .footer_col__links--bold & {
         @include h5;
     }
@@ -198,6 +204,12 @@
 
     border-radius: 50%;
     background-color: #fff;
+
+    transition: transform .25s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 
     img {
         position: absolute;
@@ -374,6 +386,12 @@
 
     color: #fff;
     font-size: 0;
+
+    transition: transform .25s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 
     @media screen and (max-width: 768px) {
         grid-column: 1 / 2;
