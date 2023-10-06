@@ -12,5 +12,6 @@ document.addEventListener(
 		// include './myscripts/options.js'
 		// include './myscripts/initSwiper.js'
 		// -include './myscripts/blazy-init.js'
+		// include './myscripts/footer.js'
 	}
 );
