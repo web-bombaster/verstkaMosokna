@@ -6,7 +6,7 @@
     @media (max-width: $b768) {
         // flex-wrap: wrap;
         width: 100%;
-        display: grid;
+        // display: grid;
         justify-content: flex-start;
         // grid-template-columns: min-content min-content max-content;
         grid-template-columns: auto auto auto;
@@ -19,25 +19,14 @@
         color: var(--color-text);
         font-size: 12px;
 
-        &:nth-child(2) {
-            order: 4;
-        }
-
         &:nth-child(3) {
-            order: 2;
+            display: none;
         }
 
         &:nth-child(4) {
-            order: 5;
+            display: none;
         }
 
-        &:nth-child(5) {
-            order: 3;
-        }
-
-        &:nth-child(6) {
-            order: 6;
-        }
     }
 
 }
